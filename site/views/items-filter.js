@@ -21,7 +21,7 @@ class ItemsFilter extends View {
         const hideStores = this._filterByStores ? "" : "hidden";
         const hideMisc = this._filterByMisc ? "" : "hidden";
         const hideAvailableObption = this._availableOption ? "" : "hidden";
-        const placeholder = this.hasAttribute("placeholder") ? this.getAttribute("placeholder") : "Produkte suchen... (min. 3 Zeichen)";
+        const placeholder = this.hasAttribute("placeholder") ? this.getAttribute("placeholder") : "Vyhledávání produktů... (min. 3 znaky)";
 
         this.innerHTML = /*html*/ `
             ${
