@@ -1,10 +1,55 @@
-// These are a match of the Billa categories, which are organized in a 2-level hierarchy.
-// Each category in the top level gets a code from 1-Z, each sub category also gets a code.
-// Together the two codes from a unique id for the category, which we store in the item.category
-// field. E.g. "Obst & Gemüse > Salate" has the code "13", "Kühlwaren > Tofu" has the code "4C"
+// These are a match of the Billa categories
 exports.categories = [
     {
         name: "pecivo-1198",
+    },
+    {
+        name: "grilovani-2094",
+    },
+    {
+        name: "zpatky-do-skoly-2211",
+    },
+    {
+        name: "ovoce-a-zelenina-1165",
+    },
+    {
+        name: "chlazene-mlecne-a-rostlinne-vyrobky-1207",
+    },
+    {
+        name: "maso-a-ryby-1263",
+    },
+    {
+        name: "uzeniny-lahudky-a-hotova-jidla-1276",
+    },
+    {
+        name: "mrazene-1307",
+    },
+    {
+        name: "trvanlive-potraviny-1332",
+    },
+    {
+        name: "cukrovinky-1449",
+    },
+    {
+        name: "napoje-1474",
+    },
+    {
+        name: "specialni-a-rostlinna-vyziva-1576",
+    },
+    {
+        name: "pece-o-dite-1582",
+    },
+    {
+        name: "drogerie-a-domacnost-1901",
+    },
+    {
+        name: "mazlicci-1630",
+    },
+    {
+        name: "billa-regionalne-1667",
+    },
+    {
+        name: "billa-vlastni-vyroba-2030",
     },
 ];
 
