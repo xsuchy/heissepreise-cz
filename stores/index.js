@@ -1,2 +1,2 @@
-//exports.lidl = require("./lidl");
+exports.lidl = require("./lidl");
 exports.billa = require("./billa");
