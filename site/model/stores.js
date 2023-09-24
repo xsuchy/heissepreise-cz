@@ -6,14 +6,14 @@ exports.stores = {
         budgetBrands: ["clever"],
         color: "yellow",
         defaultChecked: true,
-        getUrl: (item) => `https://shop.billa.at/produkte/${item.id}`,
+        getUrl: (item) => `https://shop.billa.cz/produkty/${item.id}`,
     },
     lidl: {
         name: "Lidl",
         budgetBrands: ["milbona", "alpengut", "cien", "livarno", "wiesentaler"],
         color: "pink",
         defaultChecked: true,
-        getUrl: (item) => `https://www.lidl.at${item.url}`,
+        getUrl: (item) => `https://www.lidl.cz${item.url}`,
         removeOld: true,
     },
 };
