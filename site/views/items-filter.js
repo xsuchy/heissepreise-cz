@@ -305,21 +305,21 @@ class ItemsFilter extends View {
         if (this.model.numItemsBeforeCategories && this.model.numItemsBeforeCategories != filteredItems.length) queryChanged = true;
         this.model.numItemsBeforeCategories = filteredItems.length; // This is not entirely correct, but I'm too lazy...
         const filteredCategories = {};
-        filteredItems.forEach((item) => {
-            const category = categories[fromCategoryCode(item.category)[0]];
-            filteredCategories[category.index] = filteredCategories[category.index] ? filteredCategories[category.index] + 1 : 1;
-        });
-        for (const category of categories) {
-            const checkbox = elements["category-" + category.index];
-            if (filteredCategories[category.index] > 0) {
-                if (queryChanged) checkbox.checked = false;
-                checkbox.label = `${category.name} (${filteredCategories[category.index]})`;
-                checkbox.classList.remove("hidden");
-            } else {
-                if (queryChanged) checkbox.checked = true;
-                checkbox.classList.add("hidden");
-            }
-        }
+        //filteredItems.forEach((item) => {
+        //    const category = categories[fromCategoryCode(item.category)[0]];
+        //    filteredCategories[category.index] = filteredCategories[category.index] ? filteredCategories[category.index] + 1 : 1;
+        //});
+        //for (const category of categories) {
+        //    const checkbox = elements["category-" + category.index];
+        //    if (filteredCategories[category.index] > 0) {
+        //        if (queryChanged) checkbox.checked = false;
+        //        checkbox.label = `${category.name} (${filteredCategories[category.index]})`;
+        //        checkbox.classList.remove("hidden");
+        //    } else {
+        //        if (queryChanged) checkbox.checked = true;
+        //        checkbox.classList.add("hidden");
+        //    }
+        //}
 
         if (Object.keys(filteredCategories).length != 0) {
             let numEnabledCategories = 0;
