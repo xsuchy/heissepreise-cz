@@ -4,11 +4,11 @@ const utils = require("./utils");
 const HITS = Math.floor(30000 + Math.random() * 2000);
 
 const units = {
-    "": { unit: "stk", factor: 1 },
-    dosen: { unit: "stk", factor: 1 },
-    flasche: { unit: "stk", factor: 1 },
-    flaschen: { unit: "stk", factor: 1 },
-    "pkg.": { unit: "stk", factor: 1 },
+    "": { unit: "kus", factor: 1 },
+    dosen: { unit: "kus", factor: 1 },
+    flasche: { unit: "kus", factor: 1 },
+    flaschen: { unit: "kus", factor: 1 },
+    "pkg.": { unit: "kus", factor: 1 },
 };
 
 exports.getCanonical = function (item, today) {
@@ -17,7 +17,7 @@ exports.getCanonical = function (item, today) {
     let text = (item.price.basePrice?.text ?? "").trim().split("(")[0].replaceAll(",", ".").toLowerCase();
     let isWeighted = false;
 
-    if (text === "per kg") {
+    if (text === "cena za 1 kg") {
         isWeighted = true;
         unit = "kg";
     } else {
