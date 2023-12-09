@@ -40,7 +40,7 @@ exports.fetchData = async function () {
     done = false;
     result = [];
     while (!done) {
-        const PENNY_SEARCH = `https://www.penny.at/api/products?page=${page}&pageSize=${hits}`;
+        const PENNY_SEARCH = `https://www.penny.cz/api/products?page=${page}&pageSize=${hits}`;
         data = (await axios.get(PENNY_SEARCH)).data;
         done = data.count < hits || page * hits > MAXITEMS;
         page++;
