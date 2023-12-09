@@ -1675,6 +1675,11 @@
     "code": "70"
   },
   {
+    "id": "Drogerie/Kind & Mama/Windeln & Zubehör/Großpackungen",
+    "url": "https://www.mueller.at/drogerie/kind-mama/windeln-zubehoer/grosspackungen/",
+    "code": null
+  },
+  {
     "id": "Drogerie/Kind & Mama/Babynahrung",
     "url": "https://www.mueller.at/drogerie/kind-mama/babynahrung/",
     "code": "70"
@@ -2035,6 +2040,11 @@
     "code": "64"
   },
   {
+    "id": "Drogerie/Lebensmittel/Süßigkeiten/Gebäck",
+    "url": "https://www.mueller.at/drogerie/lebensmittel/suessigkeiten/gebaeck/",
+    "code": "64"
+  },
+  {
     "id": "Drogerie/Lebensmittel/Süßigkeiten/Bonbons & Lutscher",
     "url": "https://www.mueller.at/drogerie/lebensmittel/suessigkeiten/bonbons-lutscher/",
     "code": "64"
@@ -2315,6 +2325,91 @@
     "code": null
   },
   {
+    "id": "Drogerie/Tier",
+    "url": "https://www.mueller.at/drogerie/tier/",
+    "code": null
+  },
+  {
+    "id": "Drogerie/Tier/Hund",
+    "url": "https://www.mueller.at/drogerie/tier/hund/",
+    "code": null
+  },
+  {
+    "id": "Drogerie/Tier/Hund/Nassfutter",
+    "url": "https://www.mueller.at/drogerie/tier/hund/nassfutter/",
+    "code": null
+  },
+  {
+    "id": "Drogerie/Tier/Hund/Belohnung & Snacks",
+    "url": "https://www.mueller.at/drogerie/tier/hund/belohnung-snacks/",
+    "code": null
+  },
+  {
+    "id": "Drogerie/Tier/Hund/Zubehör",
+    "url": "https://www.mueller.at/drogerie/tier/hund/zubehoer/",
+    "code": null
+  },
+  {
+    "id": "Drogerie/Tier/Hund/Trockenfutter",
+    "url": "https://www.mueller.at/drogerie/tier/hund/trockenfutter/",
+    "code": null
+  },
+  {
+    "id": "Drogerie/Tier/Hund/Nahrungsergänzung",
+    "url": "https://www.mueller.at/drogerie/tier/hund/nahrungsergaenzung/",
+    "code": null
+  },
+  {
+    "id": "Drogerie/Tier/Katze",
+    "url": "https://www.mueller.at/drogerie/tier/katze/",
+    "code": null
+  },
+  {
+    "id": "Drogerie/Tier/Katze/Nassfutter",
+    "url": "https://www.mueller.at/drogerie/tier/katze/nassfutter/",
+    "code": null
+  },
+  {
+    "id": "Drogerie/Tier/Katze/Zubehör",
+    "url": "https://www.mueller.at/drogerie/tier/katze/zubehoer/",
+    "code": null
+  },
+  {
+    "id": "Drogerie/Tier/Katze/Belohnung & Snacks",
+    "url": "https://www.mueller.at/drogerie/tier/katze/belohnung-snacks/",
+    "code": null
+  },
+  {
+    "id": "Drogerie/Tier/Katze/Trockenfutter",
+    "url": "https://www.mueller.at/drogerie/tier/katze/trockenfutter/",
+    "code": null
+  },
+  {
+    "id": "Drogerie/Tier/Katze/Nahrungsergänzung",
+    "url": "https://www.mueller.at/drogerie/tier/katze/nahrungsergaenzung/",
+    "code": null
+  },
+  {
+    "id": "Drogerie/Tier/Nager",
+    "url": "https://www.mueller.at/drogerie/tier/nager/",
+    "code": null
+  },
+  {
+    "id": "Drogerie/Tier/Nager/Hauptfutter",
+    "url": "https://www.mueller.at/drogerie/tier/nager/hauptfutter/",
+    "code": null
+  },
+  {
+    "id": "Drogerie/Tier/Nager/Belohnung & Snacks",
+    "url": "https://www.mueller.at/drogerie/tier/nager/belohnung-snacks/",
+    "code": null
+  },
+  {
+    "id": "Drogerie/Tier/Nager/Zubehör",
+    "url": "https://www.mueller.at/drogerie/tier/nager/zubehoer/",
+    "code": null
+  },
+  {
     "id": "Haushalt/Schönheit & Gesundheit",
     "url": "https://www.mueller.at/haushalt/schoenheit-gesundheit/",
     "code": null
@@ -2425,6 +2520,31 @@
     "code": null
   },
   {
+    "id": "Haushalt/Wohnen & Dekorieren/Weihnachtsdekoration",
+    "url": "https://www.mueller.at/haushalt/wohnen-dekorieren/weihnachtsdekoration/",
+    "code": null
+  },
+  {
+    "id": "Haushalt/Wohnen & Dekorieren/Weihnachtsdekoration/Ambiente",
+    "url": "https://www.mueller.at/haushalt/wohnen-dekorieren/weihnachtsdekoration/ambiente/",
+    "code": null
+  },
+  {
+    "id": "Haushalt/Wohnen & Dekorieren/Weihnachtsdekoration/Baumschmuck",
+    "url": "https://www.mueller.at/haushalt/wohnen-dekorieren/weihnachtsdekoration/baumschmuck/",
+    "code": null
+  },
+  {
+    "id": "Haushalt/Wohnen & Dekorieren/Weihnachtsdekoration/Geschirr",
+    "url": "https://www.mueller.at/haushalt/wohnen-dekorieren/weihnachtsdekoration/geschirr/",
+    "code": null
+  },
+  {
+    "id": "Haushalt/Wohnen & Dekorieren/Weihnachtsdekoration/Kerzen",
+    "url": "https://www.mueller.at/haushalt/wohnen-dekorieren/weihnachtsdekoration/kerzen/",
+    "code": null
+  },
+  {
     "id": "Haushalt/Wohnen & Dekorieren/Aufbewahrungssysteme",
     "url": "https://www.mueller.at/haushalt/wohnen-dekorieren/aufbewahrungssysteme/",
     "code": null
@@ -2432,11 +2552,6 @@
   {
     "id": "Haushalt/Wohnen & Dekorieren/Bilder & Rahmen",
     "url": "https://www.mueller.at/haushalt/wohnen-dekorieren/bilder-rahmen/",
-    "code": null
-  },
-  {
-    "id": "Haushalt/Wohnen & Dekorieren/Windlichter & Kerzen",
-    "url": "https://www.mueller.at/haushalt/wohnen-dekorieren/windlichter-kerzen/",
     "code": null
   },
   {
@@ -2550,6 +2665,31 @@
     "code": null
   },
   {
+    "id": "Haushalt/Kochen & Backen/Weihnachtsbäckerei",
+    "url": "https://www.mueller.at/haushalt/kochen-backen/weihnachtsbaeckerei/",
+    "code": null
+  },
+  {
+    "id": "Haushalt/Kochen & Backen/Weihnachtsbäckerei/Ausstechformen",
+    "url": "https://www.mueller.at/haushalt/kochen-backen/weihnachtsbaeckerei/ausstechformen/",
+    "code": null
+  },
+  {
+    "id": "Haushalt/Kochen & Backen/Weihnachtsbäckerei/Backformen",
+    "url": "https://www.mueller.at/haushalt/kochen-backen/weihnachtsbaeckerei/backformen/",
+    "code": null
+  },
+  {
+    "id": "Haushalt/Kochen & Backen/Weihnachtsbäckerei/Backhelfer",
+    "url": "https://www.mueller.at/haushalt/kochen-backen/weihnachtsbaeckerei/backhelfer/",
+    "code": null
+  },
+  {
+    "id": "Haushalt/Kochen & Backen/Weihnachtsbäckerei/Gebäckdosen",
+    "url": "https://www.mueller.at/haushalt/kochen-backen/weihnachtsbaeckerei/gebaeckdosen/",
+    "code": null
+  },
+  {
     "id": "Haushalt/Kochen & Backen/Aufbewahrung",
     "url": "https://www.mueller.at/haushalt/kochen-backen/aufbewahrung/",
     "code": null
@@ -2642,11 +2782,6 @@
   {
     "id": "Haushalt/Kochen & Backen/Küchenhelfer & -textilien/Spezialhelfer",
     "url": "https://www.mueller.at/haushalt/kochen-backen/kuechenhelfer-textilien/spezialhelfer/",
-    "code": null
-  },
-  {
-    "id": "Haushalt/Kochen & Backen/Auflauf- & Backformen",
-    "url": "https://www.mueller.at/haushalt/kochen-backen/auflauf-backformen/",
     "code": null
   },
   {
@@ -2775,11 +2910,6 @@
     "code": null
   },
   {
-    "id": "Genusswelt/Marken/FRANTOIO DEL GREVEPESA",
-    "url": "https://www.mueller.at/genusswelt/marken/frantoio-del-grevepesa/",
-    "code": null
-  },
-  {
     "id": "Genusswelt/Marken/Fratelli Lunardi",
     "url": "https://www.mueller.at/genusswelt/marken/fratelli-lunardi/",
     "code": null
@@ -2815,11 +2945,6 @@
     "code": null
   },
   {
-    "id": "Genusswelt/Marken/Lyre's",
-    "url": "https://www.mueller.at/genusswelt/marken/lyres/",
-    "code": null
-  },
-  {
     "id": "Genusswelt/Marken/MILL&MORTAR",
     "url": "https://www.mueller.at/genusswelt/marken/mill-mortar/",
     "code": null
@@ -2850,8 +2975,8 @@
     "code": null
   },
   {
-    "id": "Genusswelt/Aktionen",
-    "url": "https://www.mueller.at/genusswelt/aktionen/",
+    "id": "Genusswelt/Alle Genusswelt Produkte",
+    "url": "https://www.mueller.at/genusswelt/alle-genusswelt-produkte/",
     "code": null
   },
   {
@@ -3010,9 +3135,19 @@
     "code": null
   },
   {
-    "id": "Parfümerie/Accessoires/Badaccessoires/Zahnputzbecher",
-    "url": "https://www.mueller.at/parfuemerie/accessoires/badaccessoires/zahnputzbecher/",
-    "code": "76"
+    "id": "Tiershop/Aktionen/Adventkalender für Hunde & Katzen",
+    "url": "https://www.mueller.at/tiershop/aktionen/adventkalender-fuer-hunde-katzen/",
+    "code": null
+  },
+  {
+    "id": "Haushalt/Kochen & Backen/Auflauf- & Backformen",
+    "url": "https://www.mueller.at/haushalt/kochen-backen/auflauf-backformen/",
+    "code": null
+  },
+  {
+    "id": "Tiershop/Aktionen/Aus dem Prospekt",
+    "url": "https://www.mueller.at/tiershop/aktionen/aus-dem-prospekt/",
+    "code": null
   },
   {
     "id": "Naturshop/Lebensmittel",
@@ -3175,9 +3310,9 @@
     "code": "51"
   },
   {
-    "id": "Drogerie/Lebensmittel/Süßigkeiten/Chips",
-    "url": "https://www.mueller.at/drogerie/lebensmittel/suessigkeiten/chips/",
-    "code": "63"
+    "id": "Haushalt/Wohnen & Dekorieren/Windlichter & Kerzen",
+    "url": "https://www.mueller.at/haushalt/wohnen-dekorieren/windlichter-kerzen/",
+    "code": null
   },
   {
     "id": "Genusswelt/Marken/AGRESTIS",
@@ -3185,8 +3320,23 @@
     "code": null
   },
   {
+    "id": "Genusswelt/Marken/FRANTOIO DEL GREVEPESA",
+    "url": "https://www.mueller.at/genusswelt/marken/frantoio-del-grevepesa/",
+    "code": null
+  },
+  {
+    "id": "Genusswelt/Marken/Lyre's",
+    "url": "https://www.mueller.at/genusswelt/marken/lyres/",
+    "code": null
+  },
+  {
     "id": "Genusswelt/Marken/Reingold",
     "url": "https://www.mueller.at/genusswelt/marken/reingold/",
+    "code": null
+  },
+  {
+    "id": "Genusswelt/Aktionen",
+    "url": "https://www.mueller.at/genusswelt/aktionen/",
     "code": null
   },
   {
