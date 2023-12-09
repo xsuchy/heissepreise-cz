@@ -16,6 +16,30 @@ exports.stores = {
         getUrl: (item) => `https://www.lidl.cz${item.url}`,
         removeOld: true,
     },
+    penny: {
+        name: "Penny",
+        budgetBrands: [
+            "louisa a bodie",
+            "na gril",
+            "boni",
+            "kouzelný čaj",
+            "penny",
+            "karlova koruna",
+            "tanja",
+            "řezníkův talíř",
+            "staročech",
+            "od českých farmářů",
+            "wippy",
+            "mrazivá čerstvost",
+            "enjoy",
+            "solty",
+            "crip crop",
+        ],
+        color: "purple",
+        defaultChecked: true,
+        getUrl: (item) => `https://www.penny.cz/category${item.url}`,
+        removeOld: true,
+    },
 };
 
 exports.STORE_KEYS = Object.keys(exports.stores);
