@@ -48,9 +48,6 @@ exports.categories = [
     {
         name: "billa-regionalne-1667",
     },
-    {
-        name: "billa-vlastni-vyroba-2030",
-    },
 ];
 
 exports.categories.forEach((category, index) => (category.index = index));

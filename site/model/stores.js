@@ -1,7 +1,7 @@
 const allSpacesRegex = / /g;
 
 exports.stores = {
-    billa: {
+    /*    billa: {
         name: "Billa",
         budgetBrands: ["clever"],
         color: "yellow",
@@ -16,7 +16,7 @@ exports.stores = {
         getUrl: (item) => `https://www.lidl.cz${item.url}`,
         removeOld: true,
     },
-    penny: {
+*/ penny: {
         name: "Penny",
         budgetBrands: [
             "louisa a bodie",
