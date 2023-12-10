@@ -1,12 +1,12 @@
 const allSpacesRegex = / /g;
 
 exports.stores = {
-    /*    billa: {
+    billa: {
         name: "Billa",
         budgetBrands: ["clever"],
         color: "yellow",
         defaultChecked: true,
-        getUrl: (item) => `https://shop.billa.cz/produkte/${item.url}`,
+        getUrl: (item) => `https://shop.billa.cz/produkt/${item.url}`,
     },
     lidl: {
         name: "Lidl",
@@ -16,7 +16,7 @@ exports.stores = {
         getUrl: (item) => `https://www.lidl.cz${item.url}`,
         removeOld: true,
     },
-*/ penny: {
+    penny: {
         name: "Penny",
         budgetBrands: [
             "louisa a bodie",
