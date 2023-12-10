@@ -53,7 +53,7 @@ async function parseCategory(url, parent, result, lookup) {
     const data = (await axios.get(url)).data;
     const dom = HTMLParser.parse(data);
     const categoryTitle = dom.querySelector('[data-test="category-title"]')?.textContent;
-    if (url != "https://www.penny.cz/kategorie" && categoryTitle.includes("Alle Kategorien")) return;
+    if (url != "https://www.penny.cz/category" && categoryTitle.includes("VŠECHNY KATEGORIE")) return;
     const categories = dom.querySelectorAll('[data-test="category-tree-navigation-button"]');
     for (const category of categories) {
         const link = "https://www.penny.cz" + category.getAttribute("href");
@@ -80,7 +80,7 @@ async function parseCategory(url, parent, result, lookup) {
 
 exports.initializeCategoryMapping = async () => {
     const categories = [];
-    await parseCategory("https://www.penny.cz/kategorie", null, categories, new Set());
+    await parseCategory("https://www.penny.cz/category", null, categories, new Set());
     utils.mergeAndSaveCategories("penny", categories);
 
     exports.categoryLookup = {};
@@ -98,7 +98,7 @@ exports.mapCategory = (rawItem) => {
     return null;
 };
 
-exports.urlBase = "https://www.penny.cz/produkte/";
+exports.urlBase = "https://www.penny.cz/products/";
 
 if (require.main == module) {
     (async () => {

@@ -37,7 +37,7 @@ exports.stores = {
         ],
         color: "purple",
         defaultChecked: true,
-        getUrl: (item) => `https://www.penny.cz/category${item.url}`,
+        getUrl: (item) => `https://www.penny.cz/products/${item.url}`,
         removeOld: true,
     },
 };
