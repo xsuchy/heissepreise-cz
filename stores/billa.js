@@ -24,7 +24,6 @@ const baseCategorySlugs = [
     "drogerie-a-domacnost-1901",
     "mazlicci-1630",
     "billa-regionalne-1667",
-    "setrime-jidlem-2270",
 ];
 
 // Map from old categories (see categories.js) to new categories in new Billa Store
