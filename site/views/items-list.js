@@ -289,7 +289,7 @@ class ItemsList extends View {
         if (showUnitPrice) {
             if (item.unit === "g") priceUnit = " / kg";
             else if (item.unit === "ml") priceUnit = " / l";
-            else priceUnit = " / stk";
+            else priceUnit = " / kus";
         }
 
         let priceHistory = "";

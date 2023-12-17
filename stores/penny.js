@@ -4,13 +4,13 @@ const HTMLParser = require("node-html-parser");
 const MAXITEMS = 10000;
 
 const units = {
-    bd: { unit: "stk", factor: 1 },
+    bd: { unit: "kus", factor: 1 },
     gr: { unit: "g", factor: 1 },
     lt: { unit: "ml", factor: 1000 },
-    pk: { unit: "stk", factor: 1 },
-    pa: { unit: "stk", factor: 1 },
-    rl: { unit: "stk", factor: 1 },
-    tb: { unit: "stk", factor: 1 },
+    pk: { unit: "kus", factor: 1 },
+    pa: { unit: "kus", factor: 1 },
+    rl: { unit: "kus", factor: 1 },
+    tb: { unit: "kus", factor: 1 },
 };
 
 exports.getCanonical = function (item, today) {
