@@ -1,5 +1,6 @@
 const axios = require("axios");
 const utils = require("./utils");
+const dmCats = require('./dm-categories.json'); // https://content.services.dmtech.com/rootpage-dm-shop-cs-cz/?view=navigation
 
 const units = {
     ks: { unit: "útržků", factor: 1 }, // 3815x
@@ -28,6 +29,7 @@ exports.getCanonical = function (item, today) {
             unit,
             quantity,
             url: item.relativeProductUrl,
+            categoryNames: item.categoryNames,
             ...((item.brandName === "dmBio" || (item.name && /^Bio[ -]/.test(item.name))) && { bio: true }),
         },
         units,
@@ -100,6 +102,10 @@ exports.fetchData = async function () {
 
 exports.initializeCategoryMapping = async () => {};
 
-exports.mapCategory = (rawItem) => {};
+exports.mapCategory = (rawItem, item) => {
+    const category = dmCats[item.categoryNames];
+    if (category) return category.code;
+    return null;
+};
 
 exports.urlBase = "https://www.dm.cz/product-p";
