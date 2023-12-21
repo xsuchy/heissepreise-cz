@@ -11,8 +11,8 @@ const units = {
     m: { unit: "metr", factor: 1 }, // 20x
     l: { unit: "litr", factor: 1 }, // 106x
     "útrž.": { unit: "útržků", factor: 1 }, // 21x
-    PD: { unit: "prací dávka", factor: 1 }, // 197x
-    MD: { unit: "mycí dávka", factor: 1 } // 7x
+    pd: { unit: "prací dávka", factor: 1 }, // 197x
+    md: { unit: "mycí dávka", factor: 1 } // 7x
 };
 
 exports.getCanonical = function (item, today) {
@@ -27,6 +27,7 @@ exports.getCanonical = function (item, today) {
             priceHistory: [{ date: today, price: item.price.value }],
             unit,
             quantity,
+            url: item.relativeProductUrl,
             ...((item.brandName === "dmBio" || (item.name && /^Bio[ -]/.test(item.name))) && { bio: true }),
         },
         units,
