@@ -141,7 +141,7 @@ class ItemsChart extends View {
                     return value.toLocaleString(navigator.language || "de-DE", {
                         minimumFractionDigits: 2,
                         style: "currency",
-                        currency: "EUR",
+                        currency: "CZK",
                     });
                 },
             },
