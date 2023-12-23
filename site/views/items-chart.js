@@ -138,7 +138,7 @@ class ItemsChart extends View {
         let yAxis = {
             ticks: {
                 callback: function (value, index, ticks) {
-                    return value.toLocaleString(navigator.language || "de-DE", {
+                    return value.toLocaleString(navigator.language || "cs-CZ", {
                         minimumFractionDigits: 2,
                         style: "currency",
                         currency: "CZK",
