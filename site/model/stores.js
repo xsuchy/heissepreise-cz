@@ -42,8 +42,8 @@ exports.stores = {
     },
     dm: {
         name: "DM",
-        budgetBrands: [],
-        color: undefined,
+        budgetBrands: ["balea"],
+        color: "orange",
         defaultChecked: true,
         getUrl: (item) => `https://www.dm.cz/product-p${item.url}`,
     },
