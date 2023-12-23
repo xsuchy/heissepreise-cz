@@ -32,6 +32,7 @@ exports.globalUnits = {
     rolí: { unit: "kus", factor: 1 },
     role: { unit: "kus", factor: 1 },
     rolky: { unit: "kus", factor: 1 },
+    rl: { unit: "kus", factor: 1 },
     "m²": { unit: "m²", factor: 1 },
     "p.dáv": { unit: "p.dáv", factor: 1 },
 };
