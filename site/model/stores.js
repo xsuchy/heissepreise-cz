@@ -40,6 +40,13 @@ exports.stores = {
         getUrl: (item) => `https://www.penny.cz/products/${item.url}`,
         removeOld: true,
     },
+    dm: {
+        name: "DM",
+        budgetBrands: [],
+        color: undefined,
+        defaultChecked: true,
+        getUrl: (item) => `https://www.dm.cz/product-p${item.url}`,
+    },
 };
 
 exports.STORE_KEYS = Object.keys(exports.stores);

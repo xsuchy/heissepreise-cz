@@ -1,14 +1,19 @@
 const axios = require("axios");
 const utils = require("./utils");
+const dmCats = require('./dm-categories.json'); // https://content.services.dmtech.com/rootpage-dm-shop-cs-cz/?view=navigation
 
 const units = {
-    wl: { unit: "wg", factor: 1 },
-    bl: { unit: "stk", factor: 1 },
-    btl: { unit: "stk", factor: 1 },
-    portion: { unit: "stk", factor: 1 },
-    satz: { unit: "stk", factor: 1 },
-    tablette: { unit: "stk", factor: 1 },
-    undefined: { unit: "stk", factor: 1 },
+    ks: { unit: "útržků", factor: 1 }, // 3815x
+    ml: { unit: "mililitr", factor: 1 }, // 5711x
+    mm: { unit: "mililitr", factor: 1 }, // 5x
+    g: { unit: "gram", factor: 1 }, // 3355x
+    porci: { unit: "gram", factor: 1 }, // 2x
+    kg: { unit: "kilogram", factor: 1 }, // x54
+    m: { unit: "metr", factor: 1 }, // 20x
+    l: { unit: "litr", factor: 1 }, // 106x
+    "útrž.": { unit: "útržků", factor: 1 }, // 21x
+    pd: { unit: "prací dávka", factor: 1 }, // 197x
+    md: { unit: "mycí dávka", factor: 1 } // 7x
 };
 
 exports.getCanonical = function (item, today) {
@@ -23,6 +28,8 @@ exports.getCanonical = function (item, today) {
             priceHistory: [{ date: today, price: item.price.value }],
             unit,
             quantity,
+            url: item.relativeProductUrl,
+            categoryNames: item.categoryNames,
             ...((item.brandName === "dmBio" || (item.name && /^Bio[ -]/.test(item.name))) && { bio: true }),
         },
         units,
@@ -31,33 +38,34 @@ exports.getCanonical = function (item, today) {
 };
 
 exports.fetchData = async function () {
-    const DM_BASE_URL = `https://product-search.services.dmtech.com/at/search/crawl?pageSize=1000&`;
+    const DM_BASE_URL = `https://product-search.services.dmtech.com/cz/search/crawl?pageSize=1000&`;
     const QUERIES = [
-        "allCategories.id=010000&price.value.to=2", //~500 items
-        "allCategories.id=010000&price.value.from=2&price.value.to=3", //~600 items
-        "allCategories.id=010000&price.value.from=3&price.value.to=4", //~500 items
-        "allCategories.id=010000&price.value.from=4&price.value.to=7", //~800 items
-        "allCategories.id=010000&price.value.from=7&price.value.to=10", //~900 items
-        "allCategories.id=010000&price.value.from=10&price.value.to=15", //~900 items
-        "allCategories.id=010000&price.value.from=15", //~300 items
-        "allCategories.id=020000&price.value.to=2", //~600 items
-        "allCategories.id=020000&price.value.from=2&price.value.to=3", //~550 items
-        "allCategories.id=020000&price.value.from=3&price.value.to=4", //~600 items
-        "allCategories.id=020000&price.value.from=4&price.value.to=6", //~800 items
-        "allCategories.id=020000&price.value.from=6&price.value.to=10", //~850 items
-        "allCategories.id=020000&price.value.from=10&price.value.to=18", //~930 items
-        "allCategories.id=020000&price.value.from=18&price.value.to=70", //~940 items
-        "allCategories.id=020000&price.value.from=70", //~60 items
-        "allCategories.id=030000&price.value.to=8", //~900 items
-        "allCategories.id=030000&price.value.from=8", //~500 items
-        "allCategories.id=040000&price.value.to=2", //~600 items
-        "allCategories.id=040000&price.value.from=2&price.value.to=4", //~900 items
-        "allCategories.id=040000&price.value.from=4", //~400 items
-        "allCategories.id=050000&price.value.to=4", //~600 items
-        "allCategories.id=050000&price.value.from=4", //~800 items
-        "allCategories.id=060000&price.value.to=4", //~900 items
-        "allCategories.id=060000&price.value.from=4", //~500 items
-        "allCategories.id=070000", //~300 items
+        "allCategories.id=010000&price.value.to=50", //~325 items
+        "allCategories.id=010000&price.value.from=50&price.value.to=80", //~547 items
+        "allCategories.id=010000&price.value.from=80&price.value.to=100", //~387 items
+        "allCategories.id=010000&price.value.from=100&price.value.to=150", //~395 items
+        "allCategories.id=010000&price.value.from=150&price.value.to=200", //~342 items
+        "allCategories.id=010000&price.value.from=200&price.value.to=250", //~410 items
+        "allCategories.id=010000&price.value.from=250", //~726 items
+        "allCategories.id=020000&price.value.to=50", //~490 items
+        "allCategories.id=020000&price.value.from=50&price.value.to=80", //~578 items
+        "allCategories.id=020000&price.value.from=80&price.value.to=100", //~487 items
+        "allCategories.id=020000&price.value.from=100&price.value.to=150", //~690 items
+        "allCategories.id=020000&price.value.from=150&price.value.to=200", //~558 items
+        "allCategories.id=020000&price.value.from=200&price.value.to=250", //~244 items
+        "allCategories.id=020000&price.value.from=250&price.value.to=300", //~275 items
+        "allCategories.id=020000&price.value.from=300", //~812 items       
+        "allCategories.id=030000&price.value.to=50", //~131 items
+        "allCategories.id=030000&price.value.from=50&price.value.to=150", //~567 items
+        "allCategories.id=030000&price.value.from=90", //~578 items
+        "allCategories.id=040000&price.value.to=50", //~615 items
+        "allCategories.id=040000&price.value.from=50&price.value.to=80", //~345 items
+        "allCategories.id=040000&price.value.from=80", //~231 items
+        "allCategories.id=050000&price.value.to=120", //~865 items
+        "allCategories.id=050000&price.value.from=120", //~840 items
+        "allCategories.id=060000&price.value.to=100", //~871 items
+        "allCategories.id=060000&price.value.from=100", //~685 items
+        "allCategories.id=070000", //~305 items
     ];
 
     let dmItems = [];
@@ -94,6 +102,10 @@ exports.fetchData = async function () {
 
 exports.initializeCategoryMapping = async () => {};
 
-exports.mapCategory = (rawItem) => {};
+exports.mapCategory = (rawItem, item) => {
+    const category = dmCats[item.categoryNames];
+    if (category) return category.code;
+    return null;
+};
 
-exports.urlBase = "https://www.dm.at/product-p";
+exports.urlBase = "https://www.dm.cz/product-p";

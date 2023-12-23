@@ -304,7 +304,7 @@ exports.updateData = async function (dataDir, done) {
                     for (let i = 0; i < items.length; i++) {
                         const rawItem = rawItems[i];
                         const item = items[i];
-                        item.category = stores[store].mapCategory(rawItem);
+                        item.category = stores[store].mapCategory(rawItem, item); // both could be unrelated ?!
                         if (item.category == null) numUncategorized++;
                     }
 
