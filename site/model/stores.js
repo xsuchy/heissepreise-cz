@@ -6,7 +6,7 @@ exports.stores = {
         budgetBrands: ["clever"],
         color: "yellow",
         defaultChecked: true,
-        getUrl: (item) => `https://shop.billa.cz/produkt/${item.url}`,
+        getUrl: (item) => (item.url ? `https://shop.billa.cz/produkt/${item.url}` : `https://www.google.com/search?q="${item.id}"`),
     },
     lidl: {
         name: "Lidl",
@@ -53,6 +53,13 @@ exports.stores = {
         color: undefined,
         defaultChecked: true,
         getUrl: (item) => `https://www.albert.cz${item.url}`,
+    },
+    globus: {
+        name: "Globus",
+        budgetBrands: [],
+        color: undefined,
+        defaultChecked: true,
+        getUrl: (item) => `https://shop.iglobus.cz/cz/${item.url}`,
     },
 };
 
