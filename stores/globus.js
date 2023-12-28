@@ -1,6 +1,5 @@
 const parser = require("node-html-parser");
 const utils = require("./utils");
-const { json } = require("express");
 
 const units = {
     bli: { unit: "blistr", factor: 1 },
@@ -45,14 +44,14 @@ exports.fetchData = async function () {
 
     do {
         try {
-            // const res = await fetch(`https://shop.iglobus.cz/cs/search?sort=price_asc&ipp=${blockOfPages}&page=${page}'#'`);
-            // const txt = await res.text();
-            // const fs = require('fs'); if (fs.existsSync('stores/globus')) fs.writeFileSync(`stores/globus/GlobPage${page}.htm`, txt);
+            const res = await fetch(`https://shop.iglobus.cz/cs/search?sort=price_asc&ipp=${blockOfPages}&page=${page}'#'`);
+            const txt = await res.text();
             const fs = require("fs");
-            const txt = fs.readFileSync(`stores/globus/GlobPage${page}.htm`).toString();
-            const root = await parser.parse(txt.substring(txt.indexOf("<html")));
+            if (fs.existsSync("stores/globus")) fs.writeFileSync(`stores/globus/GlobPage${page}.htm`, txt);
+            // const fs = require('fs'); const txt = fs.readFileSync(`stores/globus/GlobPage${page}.htm`).toString();
+            const root = parser.parse(txt.substring(txt.indexOf("<html")));
             if (page == 1) {
-                lastPage = await root.querySelectorAll(".pagination__step-cz");
+                lastPage = root.querySelectorAll(".pagination__step-cz");
                 lastPage = lastPage
                     .pop()
                     .attributes.valueOf()
