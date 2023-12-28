@@ -47,6 +47,13 @@ exports.stores = {
         defaultChecked: true,
         getUrl: (item) => `https://www.dm.cz/product-p${item.url}`,
     },
+    albert: {
+        name: "Albert",
+        budgetBrands: [],
+        color: undefined,
+        defaultChecked: true,
+        getUrl: (item) => `https://www.albert.cz${item.url}`,
+    },
 };
 
 exports.STORE_KEYS = Object.keys(exports.stores);
