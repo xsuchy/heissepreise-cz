@@ -54,6 +54,13 @@ exports.stores = {
         defaultChecked: true,
         getUrl: (item) => `https://www.albert.cz${item.url}`,
     },
+    globus: {
+        name: "Globus",
+        budgetBrands: [],
+        color: undefined,
+        defaultChecked: true,
+        getUrl: (item) => `https://shop.iglobus.cz${item.url}`,
+    },
 };
 
 exports.STORE_KEYS = Object.keys(exports.stores);
