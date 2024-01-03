@@ -1,118 +1,92 @@
-const axios = require("axios");
+const parser = require("node-html-parser");
 const utils = require("./utils");
+const { json } = require("express");
 
 const units = {
-    bli: { unit: "blistr", factor: 1 }, // 1x
-    list: { unit: "sada", factor: 1 }, // 5x
+    bli: { unit: "blistr", factor: 1 },
+    blistr: { unit: "blistr", factor: 1 },
+    balení: { unit: "balení", factor: 1 },
+    kus: { unit: "kus", factor: 1 },
+    list: { unit: "listy", factor: 1 },
+    sada: { unit: "sada", factor: 1 },
     pg: { unit: "balení", factor: 1 },
+    unit: { unit: "balení", factor: 1 },
 };
 
 exports.getCanonical = function (item, today) {
-    return utils.convertUnit(
+    const price = parseFloat(item.price);
+
+    let canItem = utils.convertUnit(
         {
-            id: "" + item.ean[0],
+            id: item.sku,
             name: item.name,
-            description: item.description,
-            price: item.productInHouse.actualPrice,
-            priceHistory: [{ date: today, price: item.productInHouse.actualPrice }],
-            unit: item.unitId,
-            quantity: item.baseVariantQuantity,
-            url: `${item.name
-                .toLowerCase()
-                .replace(/\s+/g, "-")
-                .match(/[a-z0-9-]+/gi)
-                .join("")}/${item.ean[0]}`,
-            // https://shop.iglobus.cz/cz/mango-zral-balen-rte-2-ks/8594023949733 .../kokosov-oech-1-ks/107200
-            categoryNames: item.productInHouse.placements?.category || item.productCategories[0],
-            ...(item.name && /^Bio[ -]/.test(item.name) && { bio: true }),
+            description: undefined,
+            price: price,
+            priceHistory: [{ date: today, price: price }],
+            unit: item.saleVolume[4],
+            quantity: price / item.saleVolume[1].replace(",", "."),
+            url: item.url,
+            categoryNames: undefined,
+            ...(item.name && /( bio )|(^bio )/i.test(item.name) && { bio: true }),
         },
         units,
         "globus"
     );
+    canItem.quantity = canItem.quantity + 0.001 > 1 ? Math.round(canItem.quantity) : Math.round(canItem.quantity * 1000) / 1000;
+
+    return canItem;
 };
 
 exports.fetchData = async function () {
-    const categories = {
-        1: "Čerstvé potraviny",
-        2: "Trvanlivé potraviny",
-        4: "Pečivo",
-        5: "Maso, uzeniny",
-        10: "Ostatní",
-        12: "Dům, zahrada",
-        14: "Alkoholické nápoje",
-        15: "Nealkoholické nápoje",
-        16: "Lahůdky",
-        17: "Mražené",
-        18: "Drogerie",
-        19: "Domácnost",
-        20: "Zábava a volný čas",
-        21: "Elektro",
-        22: "Móda",
-        23: "Vlastní výroba",
-        24: "Zdravý svět",
-    };
-
     let globusItems = [];
-    const blockOfPages = 16;
+    const blockOfPages = 72;
+    let page = 1,
+        lastPage = -1;
 
-    // Brno,Praha-Černý Most,Praha-Zličín,Pardubice,Praha-Čakovice,Liberec,Ostrava,Olomouc,České Budějovice,Chomutov,Plzeň-Chotíkov,Opava,Karlovy Vary-Jenišov,Trmice,Havířov,Praha-Štěrboholy
-    const shops = [
-        4001, //4002, 4003, 4004, 4005, /*!23>*/4006, 4007, 4008, 4009, 4010, 4011, 4012, 4014/*<!23*/, 4015, /*!23>*/4019, 4026
-    ];
-    for (let shop of shops) {
-        const GLOBUS_BASE_URL = `https://www.globus.cz/api/v1/gsoa/actionOffers/houses/${shop}/actionProductsCatalog?filter=categoryId:in `;
-        for (let category in categories) {
-            let page = 0,
-                remains = 0,
-                res;
-            do {
-                const query = `${category}&listedProductOnly=false&blickPunkt=false&page=${page}&pageSize=${blockOfPages}`;
-                try {
-                    res = await axios.get(GLOBUS_BASE_URL + query, {
-                        validateStatus: function (status) {
-                            return (status >= 200 && status < 300) || status == 429;
-                        },
-                    });
-                } catch (e) {
-                    console.log(e);
-                    break;
-                }
-                remains = res.data.paginationShowMore;
-
-                // exponential backoff
-                backoff = 2000;
-                while (res.status != 200) {
-                    console.info(`Globus API returned ${res.status}, retrying in ${backoff / 1000}s.`);
-                    await new Promise((resolve) => setTimeout(resolve, backoff));
-                    backoff *= 2;
-                    try {
-                        res = await axios.get(GLOBUS_BASE_URL + query, {
-                            validateStatus: function (status) {
-                                return (status >= 200 && status < 300) || status == 429;
-                            },
-                        });
-                    } catch (e) {
-                        console.log(e);
-                        break;
-                    }
-                }
-                if (!res.data.products.length && !page) break;
-                globusItems = globusItems.concat(res.data.products);
-                console.log(`Globus ${categories[category]}/${page} ${res.data.products.length}/${remains} (${globusItems.length})`);
-                page++;
-                await new Promise((resolve) => setTimeout(resolve, 10 + Math.random() * 10));
-            } while (remains);
+    do {
+        try {
+            // const res = await fetch(`https://shop.iglobus.cz/cs/search?sort=price_asc&ipp=${blockOfPages}&page=${page}'#'`);
+            // const txt = await res.text();
+            // const fs = require('fs'); if (fs.existsSync('stores/globus')) fs.writeFileSync(`stores/globus/GlobPage${page}.htm`, txt);
+            const fs = require("fs");
+            const txt = fs.readFileSync(`stores/globus/GlobPage${page}.htm`).toString();
+            const root = await parser.parse(txt.substring(txt.indexOf("<html")));
+            if (page == 1) {
+                lastPage = await root.querySelectorAll(".pagination__step-cz");
+                lastPage = lastPage
+                    .pop()
+                    .attributes.valueOf()
+                    .href.match(/(\d+)#*$/)[1];
+            }
+            const items = root.getElementsByTagName("product-item");
+            console.log(`Globus pg ${page}/${lastPage} -> ${globusItems.length + items.length} items.`);
+            for (var i of items) {
+                let script = i.getElementsByTagName("script").pop().innerText;
+                const [start, end] = [script.indexOf("{"), script.lastIndexOf("}")];
+                script = script
+                    .substring(start, end + 1)
+                    .replace(/\s+/g, "")
+                    .replace(/,\}$/, "}")
+                    .replace(/'([:,])'/g, '"$1"')
+                    .replace(/\{'/, '{"')
+                    .replace(/'\}/, '"}');
+                const data = JSON.parse(script);
+                i.querySelector(".product-item__sale-volume")
+                    .innerText.trim()
+                    .match(/\((\S+)\s+(\S+)\/()(\S+)\)|(\S+)\s+(\S+)\/(\S+)\s+(\S+)/);
+                const saleVolume = i.querySelector(".product-item__sale-volume").innerText.trim();
+                data.saleVolume = saleVolume.match(/(\S+)\s+(\S+)\/(\S+)\s+(\S+)/) || saleVolume.match(/\((\S+)\s+(\S+)\/()(\S+)\)/);
+                delete data.position;
+                delete data.list;
+                globusItems.push(data);
+            }
+        } catch (e) {
+            console.error(e.message);
         }
-    }
-
+    } while (page++ < lastPage);
     return globusItems;
 };
 
 exports.initializeCategoryMapping = async () => {};
 
-exports.mapCategory = (rawItem, item) => {
-    if (item?.categoryNames?.length !== undefined) return item.categoryNames[0];
-    return null;
-};
-
-//exports.urlBase = "https://shop.iglobus.cz/cz/";
+exports.mapCategory = (rawItem) => {};

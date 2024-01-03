@@ -59,7 +59,7 @@ exports.stores = {
         budgetBrands: [],
         color: undefined,
         defaultChecked: true,
-        getUrl: (item) => `https://shop.iglobus.cz/cz/${item.url}`,
+        getUrl: (item) => `https://shop.iglobus.cz${item.url}`,
     },
 };
 
