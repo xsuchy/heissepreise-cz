@@ -47,6 +47,13 @@ exports.stores = {
         defaultChecked: true,
         getUrl: (item) => `https://www.dm.cz/product-p${item.url}`,
     },
+    tesco: {
+        name: "Tesco",
+        budgetBrands: [],
+        color: undefined,
+        defaultChecked: true,
+        getUrl: (item) => `https://nakup.itesco.cz/groceries/cs-CZ/products/${item.id}`,
+    },
 };
 
 exports.STORE_KEYS = Object.keys(exports.stores);
