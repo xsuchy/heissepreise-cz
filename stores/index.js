@@ -4,3 +4,4 @@ exports.penny = require("./penny");
 exports.dm = require("./dm");
 exports.albert = require("./albert");
 exports.globus = require("./globus");
+exports.tesco = require("./tesco");
