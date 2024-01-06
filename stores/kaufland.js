@@ -31,7 +31,7 @@ exports.fetchData = async function () {
     let res = await fetch(stUrl);
     let json = await res.json();
     let batch = json.products.items;
-    let more = JSON.stringify({cursor:json.products.cursor,limit:30});
+    let more = JSON.stringify({ cursor: json.products.cursor, limit: fetchLimit });
     json.cursor = json.products.cursor;
 
     while (res.status == 200 && (json.cursor || json.products.length)) {
@@ -50,7 +50,7 @@ exports.fetchData = async function () {
                     url: item.url,
                     category: item.mainCategory.name,
                 };
-            } catch(e) {
+            } catch(e){
                 console.log(e);
             }
             kauflandItems.push(itemData);
@@ -63,7 +63,7 @@ exports.fetchData = async function () {
         });
         json = await res.json();
         batch = json.products;
-        more = JSON.stringify({cursor:json.cursor,limit:30});
+        more = JSON.stringify({ cursor: json.cursor, limit: fetchLimit });
     }
 
     return kauflandItems;
