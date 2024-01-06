@@ -8,8 +8,6 @@ const units = {
 };
 
 const baseCategorySlugs = [
-    "vanoce-2280",
-    "silvestr-2211",
     "ovoce-a-zelenina-1165",
     "pecivo-1198",
     "chlazene-mlecne-a-rostlinne-vyrobky-1207",
