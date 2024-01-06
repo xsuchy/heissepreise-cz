@@ -6,7 +6,7 @@ exports.stores = {
         budgetBrands: ["clever"],
         color: "yellow",
         defaultChecked: true,
-        getUrl: (item) => `https://shop.billa.cz/produkt/${item.url}`,
+        getUrl: (item) => (item.url ? `https://shop.billa.cz/produkt/${item.url}` : `https://www.google.com/search?q="${item.id}"`),
     },
     lidl: {
         name: "Lidl",
