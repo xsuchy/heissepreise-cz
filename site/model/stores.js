@@ -68,6 +68,13 @@ exports.stores = {
         defaultChecked: true,
         getUrl: (item) => `https://nakup.itesco.cz/groceries/cs-CZ/products/${item.id}`,
     },
+    kaufland: {
+        name: "Kaufland",
+        budgetBrands: [],
+        color: undefined,
+        defaultChecked: true,
+        getUrl: (item) => `https://www.kosik.cz${item.url}`,
+    },
 };
 
 exports.STORE_KEYS = Object.keys(exports.stores);
