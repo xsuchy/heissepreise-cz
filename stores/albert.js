@@ -49,7 +49,7 @@ async function sha256(message) {
 }
 
 exports.fetchData = async function () {
-    const body = { query: "query DeviceId  {deviceId}" };
+    const body = { query: "query DeviceId {deviceId}" };
     let axiosConfiguration = {
         headers: {
             "Content-Type": "application/json;charset=UTF-8",
@@ -103,6 +103,9 @@ exports.fetchData = async function () {
             });
             if (levelStarts) {
                 remains = res.data.data.categoryProductSearch.pagination.totalResults;
+                console.log(
+                    `Albert ${res.data.data.categoryProductSearch.pagination.totalPages}x${blockOfPages} => ${albertItems.length} + ${remains}`
+                );
                 levelStarts = 0;
             }
 
