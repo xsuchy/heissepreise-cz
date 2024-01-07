@@ -217,8 +217,9 @@ class ItemsList extends View {
             const string = keywords[i];
             // check if keyword is not preceded by a < or </
             const regex = new RegExp(string, "gi");
-            highlightedName = highlightedName.replace(regex, "<strong>$&</strong>");
+            highlightedName = highlightedName.replace(regex, "\n$&\r");
         }
+        highlightedName = highlightedName.replace(/\n/g, "<strong>").replace(/\r/g, "</strong>");
         return `${highlightedName}`;
     }
 
