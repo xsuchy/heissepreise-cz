@@ -25,10 +25,11 @@ exports.fetchData = async function () {
     let headers = { cookie: [] };
     async function firstGet(fetchOpts, Url) {
         let res = undefined;
+        console.log(`Tesco ${Url} ${JSON.stringify(fetchOpts).substr(0, 100)}...`);
         await fetch(Url, fetchOpts).then((response) => {
             res = response;
             for (const pair of response.headers) {
-                console.log(`all0 ${pair[0]}:${pair[1]}`);
+                // console.log(`all ${pair[0]}:${pair[1]}`);
                 if (pair[0] == "content-length") continue;
                 if (pair[0] == "set-cookie") {
                     headers.cookie.push(pair[1].split(";")[0]);
@@ -38,8 +39,10 @@ exports.fetchData = async function () {
             }
         });
         fetchOpts.headers.cookie = headers.cookie.join("; ");
+        console.log(`Tesco cookies:${fetchOpts.headers.cookie.substr(0, 100)}`);
         headers.cookie = [];
         txt = await res.text();
+        console.log(`Tesco firstGet content (${txt.length}) ${txt.substring(0, 300)}...`);
         let magics = parser.parse(txt.substring(txt.indexOf("<html")), {
             lowerCaseTagName: true, // convert tag name to lower case (hurts performance heavily)
             comment: false, // retrieve comments (hurts performance slightly)
@@ -51,6 +54,11 @@ exports.fetchData = async function () {
             },
         });
         let scripts = magics.getElementsByTagName("script");
+        console.log(
+            `Tesco firstGet ${scripts.length} scripts / last ${scripts[scripts.length - 1].outerHTML.substr(0, 1500)}\n=======\n${scripts[
+                scripts.length - 2
+            ].outerHTML.substr(0, 100)}`
+        ); // real examples 1081, 66
         let body = scripts
             .pop()
             .innerText.match(/(\{"bm-verify":.+:\s+)j\}\)/)
@@ -65,9 +73,10 @@ exports.fetchData = async function () {
         fetchOpts.headers.Referer = Url;
         fetchOpts.body = body;
         fetchOpts.method = "POST";
+        console.log(`Tesco firstGet POST https://nakup.itesco.cz/_sec/verify?provider=interstitial ${JSON.stringify(fetchOpts).substr(0, 100)}...`);
         res = await fetch("https://nakup.itesco.cz/_sec/verify?provider=interstitial", fetchOpts).then((response) => {
             for (const pair of response.headers) {
-                console.log(`provider ${pair[0]}:${pair[1]}`);
+                // console.log(`provider ${pair[0]}:${pair[1]}`);
                 if (pair[0] == "content-length") continue;
                 if (pair[0] == "set-cookie") {
                     headers.cookie.push(pair[1].split(";")[0]);
@@ -78,7 +87,9 @@ exports.fetchData = async function () {
         });
         delete fetchOpts.body;
 
-        return headers.cookie.join("; ");
+        const cookies = headers.cookie.join("; ");
+        console.log(`Tesco firstGet cookies ${cookies}`);
+        return cookies;
     }
     let tescoItems = [];
 
@@ -118,29 +129,39 @@ exports.fetchData = async function () {
         do {
             // https://nakup.itesco.cz/groceries/cs-CZ/shop/ovoce-a-zelenina/all (?page=1...)
             const Url = `${baseUrl}${childUrl}?page=${page}&count=${settings.blockOfPages}`;
-            console.log(`${tescoItems.length} - ${i + 1}. z ${categories.length} ${Url}`);
+            console.log(`Tesco ${tescoItems.length} - ${i + 1}. z ${categories.length} ${Url}`);
             if (!tescoItems.length && !debugEnv) {
-                await firstGet(fetchOpts, Url);
-                fetchOpts.headers.cookie = headers.cookie.join("; ");
-                fetchOpts.method = "GET";
+                try {
+                    await firstGet(fetchOpts, Url);
+                    fetchOpts.headers.cookie = headers.cookie.join("; ");
+                    fetchOpts.method = "GET";
+                } catch (e) {
+                    console.log(`Tesco firstGet ${e}`);
+                }
             }
 
             headers.cookie = [];
             if (debugEnv) txt = fs.readFileSync(`stores/tesco/${main.catId}_${(page + 100).toString().substr(1)}.htm`).toString();
             else {
-                await fetch(Url, fetchOpts).then((response) => {
-                    res = response;
-                    for (const pair of response.headers) {
-                        if (pair[0] == "content-length") continue;
-                        if (pair[0] == "set-cookie") {
-                            headers.cookie.push(pair[1].split(";")[0]);
-                        } else {
-                            headers[pair[0]] = pair[1];
+                console.log(`Tesco ${Url} ${JSON.stringify(fetchOpts).substr(0, 100)}...`);
+                try {
+                    await fetch(Url, fetchOpts).then((response) => {
+                        res = response;
+                        for (const pair of response.headers) {
+                            if (pair[0] == "content-length") continue;
+                            if (pair[0] == "set-cookie") {
+                                headers.cookie.push(pair[1].split(";")[0]);
+                            } else {
+                                headers[pair[0]] = pair[1];
+                            }
                         }
-                    }
-                });
-                txt = await res.text();
-                if (debugEnv) fs.writeFileSync(`stores/tesco/${main.catId}_${(page + 100).toString().substr(1)}.htm`, txt);
+                    });
+                    txt = await res.text();
+                    console.log(`Tesco ${Url} got ${txt.length} bytes.`);
+                    if (debugEnv) fs.writeFileSync(`stores/tesco/${main.catId}_${(page + 100).toString().substr(1)}.htm`, txt);
+                } catch (e) {
+                    console.log(`Tesco fetch ${e}`);
+                }
             }
 
             let parseFrom = txt.indexOf(settings.rawMarks[0]) + settings.rawMarks[0].length; // <body ... data-redux-state="{&quot;
@@ -150,24 +171,29 @@ exports.fetchData = async function () {
             pagination = JSON.parse(txt.substring(parseFrom, parseTo).replace(/&quot;/g, '"')).results;
             let items = pagination.pages[page - 1].serializedData;
 
-            for (let item of items) {
-                if (item == items[0]) console.log(`${pagination.pageNo}/${pagination.pages.length} of ${pagination.totalCount}.`);
-                let itemData = item[1].product;
-                itemData = {
-                    store: "tesco",
-                    id: itemData.id,
-                    name: itemData.title,
-                    description: item[1].promotions[0]?.offerText || itemData.title,
-                    price: itemData.price,
-                    priceHistory: [],
-                    unit: itemData.unitOfMeasure,
-                    quantity: roundNum(itemData.price / itemData.unitPrice),
-                    categoryNames: itemData.departmentName,
-                };
-                if (itemData.name.startsWith(settings.bio) || itemData.name.indexOf(settings.bioMiddle) > 0) {
-                    itemData.bio = true;
+            console.log(`Tesco ${settings.rawMarks[0]} indexes ${parseFrom}-${parseTo} => ${items.length} items.`);
+            try {
+                for (let item of items) {
+                    if (item == items[0]) console.log(`Tesco ${pagination.pageNo}/${pagination.pages.length} of ${pagination.totalCount}.`);
+                    let itemData = item[1].product;
+                    itemData = {
+                        store: "tesco",
+                        id: itemData.id,
+                        name: itemData.title,
+                        description: item[1].promotions[0]?.offerText || itemData.title,
+                        price: itemData.price,
+                        priceHistory: [],
+                        unit: itemData.unitOfMeasure,
+                        quantity: roundNum(itemData.price / itemData.unitPrice),
+                        categoryNames: itemData.departmentName,
+                    };
+                    if (itemData.name.startsWith(settings.bio) || itemData.name.indexOf(settings.bioMiddle) > 0) {
+                        itemData.bio = true;
+                    }
+                    tescoItems.push(itemData);
                 }
-                tescoItems.push(itemData);
+            } catch (e) {
+                console.log(`Tesco items ${e}`);
             }
         } while (pagination.pages.length != page++);
     }
