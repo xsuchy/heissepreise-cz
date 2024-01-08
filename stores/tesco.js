@@ -6,40 +6,22 @@ const units = {
 };
 
 exports.getCanonical = function (item, today) {
-    return utils.convertUnit(
-        {
-            id: "" + item.id,
-            name: item.name,
-            // description: "", not available
-            price: item.price,
-            priceHistory: [{ date: today, price: item.price }],
-            unit: item.unit,
-            quantity: item.quantity,
-            categoryNames: item.category,
-            ...(item.name && /( bio )|(^bio )/i.test(item.name) && { bio: true }),
-        },
-        units,
-        "tesco"
-    );
+    item.priceHistory = [{ date: today, price: item.price }];
+    return utils.convertUnit(item, units, "tesco");
 };
 
 function roundNum(num, decimalExp = [1000, 100]) {
     if (num > 1) return Math.round(num * decimalExp[1]) / decimalExp[1];
     return Math.round(num * decimalExp[0]) / decimalExp[0];
 }
-function readPrice(txt) {
-    let real = txt
-        .match(/([ 0-9,.]+) \S+$/)[1]
-        .replace(/,/, ".")
-        .replace(/ /, "");
-    let num = parseFloat(real);
-    if (isNaN(num)) {
-        console.log(`Tesco ${num} invalid.`);
-        return real;
-    }
-    return num;
-}
 exports.fetchData = async function () {
+    const settings = {
+        blockOfPages: 48,
+        bio: "bio",
+        bioMiddle: " bio ",
+        scriptJSON: "script",
+        rawMarks: ["data-redux-state"],
+    };
     let headers = { cookie: [] };
     async function firstGet(fetchOpts, Url) {
         let res = undefined;
@@ -58,7 +40,16 @@ exports.fetchData = async function () {
         fetchOpts.headers.cookie = headers.cookie.join("; ");
         headers.cookie = [];
         txt = await res.text();
-        let magics = parser.parse(txt.substring(txt.indexOf("<html")), parserOpts);
+        let magics = parser.parse(txt.substring(txt.indexOf("<html")), {
+            lowerCaseTagName: true, // convert tag name to lower case (hurts performance heavily)
+            comment: false, // retrieve comments (hurts performance slightly)
+            blockTextElements: {
+                script: true,
+                noscript: false,
+                style: true,
+                pre: false,
+            },
+        });
         let scripts = magics.getElementsByTagName("script");
         let body = scripts
             .pop()
@@ -89,16 +80,6 @@ exports.fetchData = async function () {
 
         return headers.cookie.join("; ");
     }
-    let parserOpts = {
-        lowerCaseTagName: true, // convert tag name to lower case (hurts performance heavily)
-        comment: false, // retrieve comments (hurts performance slightly)
-        blockTextElements: {
-            script: true,
-            noscript: false,
-            style: true,
-            pre: false,
-        },
-    };
     let tescoItems = [];
 
     const catRaw = await fetch("https://nakup.itesco.cz/groceries/cs-CZ/taxonomy");
@@ -131,60 +112,64 @@ exports.fetchData = async function () {
         let page = 1,
             pagination;
 
+        const fs = require("fs");
+        const debugEnv = fs.existsSync("stores/tesco");
+
         do {
             // https://nakup.itesco.cz/groceries/cs-CZ/shop/ovoce-a-zelenina/all (?page=1...)
-            const Url = `${baseUrl}${childUrl}?page=${page}&count=48`;
+            const Url = `${baseUrl}${childUrl}?page=${page}&count=${settings.blockOfPages}`;
             console.log(`${tescoItems.length} - ${i + 1}. z ${categories.length} ${Url}`);
-            if (!tescoItems.length) {
+            if (!tescoItems.length && !debugEnv) {
                 await firstGet(fetchOpts, Url);
                 fetchOpts.headers.cookie = headers.cookie.join("; ");
                 fetchOpts.method = "GET";
             }
 
             headers.cookie = [];
-            await fetch(Url, fetchOpts).then((response) => {
-                res = response;
-                for (const pair of response.headers) {
-                    if (pair[0] == "content-length") continue;
-                    if (pair[0] == "set-cookie") {
-                        headers.cookie.push(pair[1].split(";")[0]);
-                    } else {
-                        headers[pair[0]] = pair[1];
+            if (debugEnv) txt = fs.readFileSync(`stores/tesco/${main.catId}_${(page + 100).toString().substr(1)}.htm`).toString();
+            else {
+                await fetch(Url, fetchOpts).then((response) => {
+                    res = response;
+                    for (const pair of response.headers) {
+                        if (pair[0] == "content-length") continue;
+                        if (pair[0] == "set-cookie") {
+                            headers.cookie.push(pair[1].split(";")[0]);
+                        } else {
+                            headers[pair[0]] = pair[1];
+                        }
                     }
-                }
-            });
-            // fetchOpts.headers.cookie = headers.cookie.join('; ');
-            txt = await res.text();
-            let root = parser.parse(txt.substring(txt.indexOf("<html")), parserOpts);
+                });
+                txt = await res.text();
+                if (debugEnv) fs.writeFileSync(`stores/tesco/${main.catId}_${(page + 100).toString().substr(1)}.htm`, txt);
+            }
 
-            let items = root.querySelectorAll("div > div > div > div > div > div:last-of-type > ul > li");
+            let parseFrom = txt.indexOf(settings.rawMarks[0]) + settings.rawMarks[0].length; // <body ... data-redux-state="{&quot;
+            parseFrom = txt.indexOf("=", parseFrom) + 1; // ="{&quot;
+            parseFrom = txt.indexOf('"', parseFrom) + 1; // &quot;accountPage
+            let parseTo = txt.indexOf('"', parseFrom); // hasLastOrder&quot;:false}}" ...
+            pagination = JSON.parse(txt.substring(parseFrom, parseTo).replace(/&quot;/g, '"')).results;
+            let items = pagination.pages[page - 1].serializedData;
 
             for (let item of items) {
-                pagination = root.querySelector("div#main > div > div > div > div > div > div > div > div > div > div").firstChild.innerText;
-                if (item == items[0]) console.log(`${pagination}.`);
-                pagination = pagination.match(/(\d+)\s+[\S]+\s+(\d+)\s+[\S]+\s+(\d+)/).slice(1, 4);
-                let paragraphs = item.querySelectorAll("p");
-                if (item.querySelectorAll("p").length == 0) {
-                    continue; // Tento produkt je momentálně nedostupný
-                }
-                let unitInfo = paragraphs.pop();
-                let unitPrice = readPrice(unitInfo.innerText);
-                let price = readPrice(paragraphs.pop().innerText);
-                let itemData = {
+                if (item == items[0]) console.log(`${pagination.pageNo}/${pagination.pages.length} of ${pagination.totalCount}.`);
+                let itemData = item[1].product;
+                itemData = {
                     store: "tesco",
-                    id: item.querySelector("form > input[name=id]").getAttribute("value"),
-                    name: item.querySelector("img").getAttribute("alt"),
-                    description: undefined,
-                    price: price,
+                    id: itemData.id,
+                    name: itemData.title,
+                    description: item[1].promotions[0]?.offerText || itemData.title,
+                    price: itemData.price,
                     priceHistory: [],
-                    unit: unitInfo.innerText.match(/\/(\S+)$/)[1],
-                    quantity: roundNum(price / unitPrice),
-                    category: cat,
+                    unit: itemData.unitOfMeasure,
+                    quantity: roundNum(itemData.price / itemData.unitPrice),
+                    categoryNames: itemData.departmentName,
                 };
+                if (itemData.name.startsWith(settings.bio) || itemData.name.indexOf(settings.bioMiddle) > 0) {
+                    itemData.bio = true;
+                }
                 tescoItems.push(itemData);
             }
-            page++;
-        } while (pagination[1] != pagination[2]);
+        } while (pagination.pages.length != page++);
     }
 
     return tescoItems;

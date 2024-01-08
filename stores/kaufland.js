@@ -1,7 +1,7 @@
 const utils = require("./utils");
 
 const units = {
-    "dávek": { unit: "kus", factor: 1 },
+    dávek: { unit: "kus", factor: 1 },
 };
 
 exports.getCanonical = function (item, today) {
@@ -50,20 +50,19 @@ exports.fetchData = async function () {
                     url: item.url,
                     category: item.mainCategory.name,
                 };
-            } catch(e){
+            } catch (e) {
                 console.log(e);
             }
             kauflandItems.push(itemData);
         }
-        if (!json.cursor)
-            break;
+        if (!json.cursor) break;
         res = await fetch("https://www.kosik.cz/api/front/products/more", {
             body: more,
-            method: "POST"
+            method: "POST",
         });
         json = await res.json();
         batch = json.products;
-        more = JSON.stringify({ cursor: json.cursor, limit: fetchLimit });
+        more = JSON.stringify({ cursor: json.cursor, limit: 30 });
     }
 
     return kauflandItems;
