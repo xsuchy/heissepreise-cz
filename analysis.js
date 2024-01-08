@@ -284,6 +284,7 @@ exports.updateData = async function (dataDir, done) {
     const today = currentDate();
     console.log("Fetching data for date: " + today);
     const storeFetchPromises = [];
+    let finished = 0;
     for (const store of STORE_KEYS) {
         storeFetchPromises.push(
             new Promise(async (resolve) => {
@@ -291,9 +292,11 @@ exports.updateData = async function (dataDir, done) {
                 try {
                     const rawDataFile = `${dataDir}/${store}-${today}.json`;
                     let rawItems;
-                    if ("SKIP_FETCHING_STORE_DATA" in process.env && fs.existsSync(rawDataFile + "." + FILE_COMPRESSOR))
+                    if ("SKIP_FETCHING_STORE_DATA" in process.env && fs.existsSync(rawDataFile + "." + FILE_COMPRESSOR)) {
                         rawItems = await readJSONAsync(rawDataFile + "." + FILE_COMPRESSOR);
-                    else {
+                        console.log(`${rawDataFile}.${FILE_COMPRESSOR} read.`);
+                    } else {
+                        console.log(`${store}.fetchData`);
                         rawItems = await stores[store].fetchData();
                         writeJSON(rawDataFile, rawItems, FILE_COMPRESSOR);
                     }
@@ -309,9 +312,9 @@ exports.updateData = async function (dataDir, done) {
                     }
 
                     console.log(
-                        `Fetched ${store.toUpperCase()} data, took ${(performance.now() - start) / 1000} seconds, ${numUncategorized}/${
-                            items.length
-                        } items without category.`
+                        `Fetched ${store.toUpperCase()} (${++finished}. of ${STORE_KEYS.length}) data, took ${
+                            (performance.now() - start) / 1000
+                        } seconds, ${numUncategorized}/${items.length} items without category.`
                     );
                     resolve(items);
                 } catch (e) {

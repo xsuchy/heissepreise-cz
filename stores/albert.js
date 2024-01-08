@@ -57,6 +57,7 @@ exports.fetchData = async function () {
         },
     };
 
+    console.log(`Albert https://www.albert.cz/api/v1/ ${JSON.stringify(body)} ${JSON.stringify(axiosConfiguration)}`);
     const deviceId = await axios
         .post("https://www.albert.cz/api/v1/", body, axiosConfiguration)
         .then((res) => {
@@ -79,6 +80,7 @@ exports.fetchData = async function () {
         sha256Hash +
         '"}}';
 
+    console.log(`Albert ${ALBERT_BASE_URL + CATEGORY_CODES} ${JSON.stringify(axiosConfiguration)}`);
     let categories = await fetch(ALBERT_BASE_URL + CATEGORY_CODES, axiosConfiguration);
     if (categories.status == 200) {
         categories = await categories.json();
@@ -96,6 +98,7 @@ exports.fetchData = async function () {
             remains = 0;
         do {
             const query = `GetCategoryProductSearch&variables={"lang":"cs","searchQuery":"","category":"${levels.code}","pageNumber":${page},"pageSize":${blockOfPages},"filterFlag":true,"plainChildCategories":true}&extensions={"persistedQuery":{"version":1,"sha256Hash":"${sha256Hash}"}}`;
+            console.log(`Albert ${ALBERT_BASE_URL + query}`);
             const res = await axios.get(ALBERT_BASE_URL + query, {
                 validateStatus: function (status) {
                     return (status >= 200 && status < 300) || status == 429;
@@ -104,7 +107,7 @@ exports.fetchData = async function () {
             if (levelStarts) {
                 remains = res.data.data.categoryProductSearch.pagination.totalResults;
                 console.log(
-                    `Albert ${res.data.data.categoryProductSearch.pagination.totalPages}x${blockOfPages} => ${albertItems.length} + ${remains}`
+                    `Albert ${res.data.data.categoryProductSearch.pagination.totalPages} pages x ${blockOfPages} items => ${albertItems.length} existing + ${remains} new`
                 );
                 levelStarts = 0;
             }
