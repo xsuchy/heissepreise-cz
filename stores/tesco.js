@@ -6,6 +6,11 @@ const units = {
 };
 
 exports.getCanonical = function (item, today) {
+    if (process.env.VSCODE_INSPECTOR_OPTIONS === undefined && item.priceHistory.length)
+    {
+        item.priceHistory.reverse();
+        return item;
+    }
     item.priceHistory = [{ date: today, price: item.price }];
     return utils.convertUnit(item, units, "tesco");
 };
@@ -15,6 +20,11 @@ function roundNum(num, decimalExp = [1000, 100]) {
     return Math.round(num * decimalExp[0]) / decimalExp[0];
 }
 exports.fetchData = async function () {
+    if (process.env.VSCODE_INSPECTOR_OPTIONS === undefined) {
+        let manItems = await fetch("https://drive.usercontent.google.com/download?id=1ImCsxh2n0avRcphULCpfee-GE0IlmM6c&export=download");
+        manItems = await manItems.json();
+        return manItems;
+    }
     const settings = {
         blockOfPages: 48,
         bio: "bio",
@@ -28,7 +38,7 @@ exports.fetchData = async function () {
         await fetch(Url, fetchOpts).then((response) => {
             res = response;
             for (const pair of response.headers) {
-                console.log(`all0 ${pair[0]}:${pair[1]}`);
+            console.log(`all0 ${pair[0]}:${pair[1]}`);
                 if (pair[0] == "content-length") continue;
                 if (pair[0] == "set-cookie") {
                     headers.cookie.push(pair[1].split(";")[0]);
@@ -147,7 +157,11 @@ exports.fetchData = async function () {
             parseFrom = txt.indexOf("=", parseFrom) + 1; // ="{&quot;
             parseFrom = txt.indexOf('"', parseFrom) + 1; // &quot;accountPage
             let parseTo = txt.indexOf('"', parseFrom); // hasLastOrder&quot;:false}}" ...
-            pagination = JSON.parse(txt.substring(parseFrom, parseTo).replace(/&quot;/g, '"')).results;
+            try {
+                pagination = JSON.parse(txt.substring(parseFrom, parseTo).replace(/&quot;/g, '"')).results;
+            } catch (e) {
+                console.log(e);
+            }
             let items = pagination.pages[page - 1].serializedData;
 
             for (let item of items) {
