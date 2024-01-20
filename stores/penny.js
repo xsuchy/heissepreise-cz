@@ -57,9 +57,8 @@ async function parseCategory(url, parent, result, lookup) {
     const categories = dom.querySelectorAll('[data-test="category-tree-navigation-button"]');
     for (const category of categories) {
         const link = "https://www.penny.cz" + category.getAttribute("href");
-        if (!category.querySelector(".subtitle-2")) continue;
-        const name = (parent ? parent + " -> " : "") + category.querySelector(".subtitle-2").innerText.trim().replace("&amp;", "&");
-        if (name.startsWith("Alle Angebote")) continue;
+        const name = (parent ? parent + " -> " : "") + category.lastChild.previousElementSibling.innerText.trim().replace("&amp;", "&");
+        if (name.startsWith("VŠECHNY AKCE")) continue;
 
         if (!lookup.has(link)) {
             lookup.add(link);

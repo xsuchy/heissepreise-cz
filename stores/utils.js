@@ -8,7 +8,7 @@ exports.mergeAndSaveCategories = (store, categories) => {
         const oldMapping = JSON.parse(fs.readFileSync(mappingFile));
         const oldLookup = {};
         for (const category of oldMapping) {
-            oldLookup[category.id] = category;
+            oldLookup[category.id.toUpperCase()] = category;
         }
 
         for (const category of categories) {
