@@ -1,6 +1,6 @@
 const axios = require("axios");
 const utils = require("./utils");
-const dmCats = require('./dm-categories.json'); // https://content.services.dmtech.com/rootpage-dm-shop-cs-cz/?view=navigation
+const dmCats = require("./dm-categories.json"); // https://content.services.dmtech.com/rootpage-dm-shop-cs-cz/?view=navigation
 
 const units = {
     ks: { unit: "útržků", factor: 1 }, // 3815x
@@ -13,7 +13,7 @@ const units = {
     l: { unit: "litr", factor: 1 }, // 106x
     "útrž.": { unit: "útržků", factor: 1 }, // 21x
     pd: { unit: "prací dávka", factor: 1 }, // 197x
-    md: { unit: "mycí dávka", factor: 1 } // 7x
+    md: { unit: "mycí dávka", factor: 1 }, // 7x
 };
 
 exports.getCanonical = function (item, today) {
@@ -54,7 +54,7 @@ exports.fetchData = async function () {
         "allCategories.id=020000&price.value.from=150&price.value.to=200", //~558 items
         "allCategories.id=020000&price.value.from=200&price.value.to=250", //~244 items
         "allCategories.id=020000&price.value.from=250&price.value.to=300", //~275 items
-        "allCategories.id=020000&price.value.from=300", //~812 items       
+        "allCategories.id=020000&price.value.from=300", //~812 items
         "allCategories.id=030000&price.value.to=50", //~131 items
         "allCategories.id=030000&price.value.from=50&price.value.to=150", //~567 items
         "allCategories.id=030000&price.value.from=90", //~578 items
@@ -102,8 +102,8 @@ exports.fetchData = async function () {
 
 exports.initializeCategoryMapping = async () => {};
 
-exports.mapCategory = (rawItem, item) => {
-    const category = dmCats[item.categoryNames];
+exports.mapCategory = (rawItem) => {
+    const category = dmCats[rawItem.categoryNames];
     if (category) return category.code;
     return null;
 };

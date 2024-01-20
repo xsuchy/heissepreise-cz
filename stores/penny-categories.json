@@ -1,57 +1,57 @@
 [
   {
-    "id": "Ovoce a Zelenina",
+    "id": "OVOCE A ZELENINA",
     "url": "https://www.penny.cz/category/ovoce-a-zelenina-16",
     "code": ""
   },
   {
-    "id": "Maso a Uzeniny",
+    "id": "MASO A UZENINY",
     "url": "https://www.penny.cz/category/maso-a-uzeniny-19",
     "code": ""
   },
   {
-    "id": "Chlazené Výrobky",
+    "id": "CHLAZENÉ VÝROBKY",
     "url": "https://www.penny.cz/category/chlazene-vyrobky-20",
+    "code": ""
+  },
+  {
+    "id": "NÁPOJE",
+    "url": "https://www.penny.cz/category/napoje-23",
+    "code": ""
+  },
+  {
+    "id": "ALKOHOL",
+    "url": "https://www.penny.cz/category/alkohol-24",
+    "code": ""
+  },
+  {
+    "id": "POTRAVINY",
+    "url": "https://www.penny.cz/category/potraviny-25",
+    "code": ""
+  },
+  {
+    "id": "KÁVA, ČAJ, KAKAO",
+    "url": "https://www.penny.cz/category/kava-caj-kakao-26",
+    "code": ""
+  },
+  {
+    "id": "CUKROVINKY",
+    "url": "https://www.penny.cz/category/cukrovinky-27",
+    "code": ""
+  },
+  {
+    "id": "PRO ZVÍŘATA",
+    "url": "https://www.penny.cz/category/pro-zvirata-29",
+    "code": ""
+  },
+  {
+    "id": "DROGERIE",
+    "url": "https://www.penny.cz/category/drogerie-30",
     "code": ""
   },
   {
     "id": "Mražené Výrobky",
     "url": "https://www.penny.cz/category/mrazene-vyrobky-22",
-    "code": ""
-  },
-  {
-    "id": "Nápoje",
-    "url": "https://www.penny.cz/category/napoje-23",
-    "code": ""
-  },
-  {
-    "id": "Alkohol",
-    "url": "https://www.penny.cz/category/alkohol-24",
-    "code": ""
-  },
-  {
-    "id": "Potraviny",
-    "url": "https://www.penny.cz/category/potraviny-25",
-    "code": ""
-  },
-  {
-    "id": "Káva, Čaj, Kakao",
-    "url": "https://www.penny.cz/category/kava-caj-kakao-26",
-    "code": ""
-  },
-  {
-    "id": "Cukrovinky",
-    "url": "https://www.penny.cz/category/cukrovinky-27",
-    "code": ""
-  },
-  {
-    "id": "Pro Zvířata",
-    "url": "https://www.penny.cz/category/pro-zvirata-29",
-    "code": ""
-  },
-  {
-    "id": "Drogerie",
-    "url": "https://www.penny.cz/category/drogerie-30",
     "code": ""
   }
 ]

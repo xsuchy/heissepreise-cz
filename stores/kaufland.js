@@ -70,7 +70,7 @@ exports.fetchData = async function () {
 
 exports.initializeCategoryMapping = async () => {};
 
-exports.mapCategory = (rawItem, item) => {
-    if (item.categoryNames) return item.categoryNames;
+exports.mapCategory = (rawItem) => {
+    if (rawItem.categoryNames) return rawItem.categoryNames;
     return null;
 };
