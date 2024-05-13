@@ -80,11 +80,11 @@ exports.fetchData = async function () {
                 let data = JSON.parse(script);
                 data.id = data.sku;
                 delete data.sku;
-                let saleVolume = i.querySelector(settings.unitsClass).innerText.trim();
+                let saleVolume = i.querySelector(settings.unitsClass)?.innerText ?? "".trim();
                 data.price = parseFloat(data.price);
-                saleVolume = saleVolume.match(settings.unitsBrackets) || saleVolume.match(settings.units);
-                data.quantity = roundNum(data.price / saleVolume[1].replace(",", "."));
-                data.unit = saleVolume[4];
+                if (saleVolume.length) saleVolume = saleVolume.match(settings.unitsBrackets) || saleVolume.match(settings.units);
+                if (saleVolume.length > 1) data.quantity = roundNum(data.price / saleVolume[1].replace(",", "."));
+                if (saleVolume.length > 3) data.unit = saleVolume[4];
                 const name = data.name.toLocaleLowerCase();
                 if ((name && name.startsWith(settings.bio)) || name.indexOf(settings.bioMiddle) > 0) {
                     data.bio = true;

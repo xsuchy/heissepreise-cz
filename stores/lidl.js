@@ -9,11 +9,13 @@ const units = {
     flasche: { unit: "kus", factor: 1 },
     flaschen: { unit: "kus", factor: 1 },
     "pkg.": { unit: "kus", factor: 1 },
+    pce: { unit: "kus", factor: 1 },
+    balení: { unit: "kus", factor: 1 },
 };
 
 exports.getCanonical = function (item, today) {
     let quantity = 1;
-    let unit = "";
+    let unit = item.price?.packaging?.unit ?? "";
     let text = (item.price.basePrice?.text ?? "").trim().split("(")[0].replaceAll(",", ".").toLowerCase();
     let isWeighted = false;
 
@@ -23,7 +25,7 @@ exports.getCanonical = function (item, today) {
     } else {
         if (text.startsWith("bei") && text.search("je ") != -1) text = text.substr(text.search("je "));
 
-        for (let s of ["ab ", "je ", "ca. ", "z.b.: ", "z.b. "]) text = text.replace(s, "").trim();
+        if (text.length) for (let s of ["ab ", "je ", "ca. ", "z.b.: ", "z.b. "]) text = text.replace(s, "").trim();
 
         const regex = /^([0-9.x ]+)(.*)$/;
         const matches = text.match(regex);
@@ -36,7 +38,7 @@ exports.getCanonical = function (item, today) {
         unit = unit.split("-")[0];
     }
 
-    const name = `${item.keyfacts?.supplementalDescription?.concat(" ") ?? ""}${item.fullTitle}`;
+    const name = item.fullTitle ?? item?.keyfacts?.fullTitle;
 
     return utils.convertUnit(
         {
@@ -57,7 +59,8 @@ exports.getCanonical = function (item, today) {
 
 exports.fetchData = async function () {
     const LIDL_SEARCH = `https://www.lidl.cz/p/api/gridboxes/CZ/cs/?max=${HITS}`;
-    return (await axios.get(LIDL_SEARCH)).data.filter((item) => !!item.price.price);
+    let data = await axios.get(LIDL_SEARCH);
+    return data.data.filter((item) => !!item.price.price);
 };
 
 exports.initializeCategoryMapping = async () => {};
