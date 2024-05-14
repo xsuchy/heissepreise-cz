@@ -9,6 +9,7 @@ const units = {
 function readPrice(txt) {
     let real = txt
         .match(/([ 0-9,.]+) \S+$/)[1]
+        .replace(/\./, "") // "discountedPriceFormatted": "1.399,00 Kč",
         .replace(/,/, ".")
         .replace(/ /, "");
     let num = parseFloat(real);
