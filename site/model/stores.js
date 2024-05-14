@@ -61,13 +61,13 @@ exports.stores = {
         defaultChecked: true,
         getUrl: (item) => `https://shop.iglobus.cz${item.url}`,
     },
-    // tesco: {
-    //     name: "Tesco",
-    //     budgetBrands: [],
-    //     color: "emerald",
-    //     defaultChecked: false,
-    //     getUrl: (item) => `https://nakup.itesco.cz/groceries/cs-CZ/products/${item.id}`,
-    // },
+    tesco: {
+        name: "Tesco",
+        budgetBrands: [],
+        color: "emerald",
+        defaultChecked: false,
+        getUrl: (item) => `https://nakup.itesco.cz/groceries/cs-CZ/products/${item.id}`,
+    },
     kaufland: {
         name: "Kaufland",
         budgetBrands: [],

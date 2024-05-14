@@ -7,6 +7,7 @@ const units = {
 
 exports.getCanonical = function (item, today) {
     item.priceHistory = [{ date: today, price: item.price }];
+    delete item.category;
     return utils.convertUnit(item, units, "tesco");
 };
 
@@ -177,7 +178,7 @@ exports.fetchData = async function () {
 
 exports.initializeCategoryMapping = async () => {};
 
-exports.mapCategory = (rawItem, item) => {
-    if (item.categoryNames) return item.categoryNames;
+exports.mapCategory = (rawItem) => {
+    if (rawItem?.category) return rawItem.category;
     return null;
 };

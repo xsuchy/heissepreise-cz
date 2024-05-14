@@ -8,6 +8,7 @@ console.log("Restoring data from raw data.");
     analysis.migrateCompression(dataDir, ".json", ".json.br", false);
     analysis.migrateCompression(dataDir, ".json.gz", ".json.br");
     const items = await analysis.replay(dataDir);
+    for (let i of items) if (i.unavailable) delete i.unavailable;
     analysis.writeJSON(`${dataDir}/latest-canonical.json`, items, analysis.FILE_COMPRESSOR);
     console.log(
         `Wrote ${

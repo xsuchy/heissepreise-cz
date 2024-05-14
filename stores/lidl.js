@@ -11,9 +11,13 @@ const units = {
     "pkg.": { unit: "kus", factor: 1 },
     pce: { unit: "kus", factor: 1 },
     balení: { unit: "kus", factor: 1 },
+    lg: { unit: "kg", factor: 1 },
+    prací: { unit: "PD", factor: 1 },
+    "g=": { unit: "g", factor: 1 }, // 100 g= 26,47 Kč/PP (Zelené olivy)
 };
 
 exports.getCanonical = function (item, today) {
+    if (item.stockAvailability.availabilityIndicator != 0 && item.stockAvailability.availabilityIndicator != 3) return null;
     let quantity = 1;
     let unit = item.price?.packaging?.unit ?? "";
     let text = (item.price.basePrice?.text ?? "").trim().split("(")[0].replaceAll(",", ".").toLowerCase();
@@ -60,7 +64,10 @@ exports.getCanonical = function (item, today) {
 exports.fetchData = async function () {
     const LIDL_SEARCH = `https://www.lidl.cz/p/api/gridboxes/CZ/cs/?max=${HITS}`;
     let data = await axios.get(LIDL_SEARCH);
-    return data.data.filter((item) => !!item.price.price);
+    /* AVAILABLE_ONLINE = 3,  IN_STORE = 0, SOLDOUT_ONLINE = 1, SOON_ONLINE = 2 */
+    return data.data.filter(
+        (item) => !!item.price.price && (item.stockAvailability.availabilityIndicator == 0 || item.stockAvailability.availabilityIndicator == 3)
+    );
 };
 
 exports.initializeCategoryMapping = async () => {};

@@ -16,6 +16,7 @@ const units = {
 exports.getCanonical = function (item, today) {
     let quantity = item.amount;
     let unit = item.volumeLabelKey;
+    if (!item.price) return null;
     return utils.convertUnit(
         {
             id: item.productId,

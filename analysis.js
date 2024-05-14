@@ -249,7 +249,9 @@ exports.replay = async (rawDataDir) => {
             for (let i = 0; i < items.length; i++) {
                 const rawItem = rawItems[sourceIdx[i]];
                 const item = items[i];
-                item.category = stores[store].mapCategory(rawItem);
+                let category = stores[store].mapCategory(rawItem);
+                if (category)
+                    item.category = category;
             }
             return items;
         });
@@ -286,6 +288,7 @@ exports.updateData = async function (dataDir, done) {
     console.log("Fetching data for date: " + today);
     const storeFetchPromises = [];
     for (const store of STORE_KEYS) {
+        if (store == "kaufland" || store == "tesco") continue;
         storeFetchPromises.push(
             new Promise(async (resolve) => {
                 const start = performance.now();
