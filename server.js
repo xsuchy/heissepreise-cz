@@ -8,6 +8,7 @@ const chokidar = require("chokidar");
 const express = require("express");
 const compression = require("compression");
 const i18n = require("./i18n");
+const sec = require("./secret");
 
 function copyItemsToSite(dataDir) {
     const items = analysis.readJSON(`${dataDir}/latest-canonical.json.${analysis.FILE_COMPRESSOR}`).filter((item) => item.name);
@@ -46,7 +47,8 @@ function parseArguments() {
     const args = process.argv.slice(2);
     let port = process.env.PORT !== undefined && process.env.PORT != "" ? parseInt(process.env.PORT) : 3000;
     let liveReload = process.env.NODE_ENV === "development" || false;
-    let skipDataUpdate = false;
+    let skipDataUpdate = fs.existsSync("~/skipDataUpdate");
+    if (skipDataUpdate) fs.unlinkSync("~/skipDataUpdate");
     for (let i = 0; i < args.length; i++) {
         if (args[i] === "-p" || args[i] === "--port") {
             port = parseInt(args[i + 1]);
@@ -127,6 +129,8 @@ function setupLogging() {
     } else {
         copyItemsToSite(dataDir);
     }
+
+    sec.process();
 
     const app = express();
     app.use(compression());
