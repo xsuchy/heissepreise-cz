@@ -68,6 +68,13 @@ exports.stores = {
         defaultChecked: false,
         getUrl: (item) => `https://nakup.itesco.cz/groceries/cs-CZ/products/${item.id}`,
     },
+    makro: {
+        name: "Makro",
+        budgetBrands: [],
+        color: "emerald",
+        defaultChecked: true,
+        getUrl: (item) => `https://sortiment.makro.cz/cs/${item.url}`,
+    },
     kaufland: {
         name: "Kaufland",
         budgetBrands: [],
