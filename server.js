@@ -47,8 +47,9 @@ function parseArguments() {
     const args = process.argv.slice(2);
     let port = process.env.PORT !== undefined && process.env.PORT != "" ? parseInt(process.env.PORT) : 3000;
     let liveReload = process.env.NODE_ENV === "development" || false;
-    let skipDataUpdate = fs.existsSync("~/skipDataUpdate");
-    if (skipDataUpdate) fs.unlinkSync("~/skipDataUpdate");
+    let skipDataUpdate = fs.existsSync(`${dataDir}/skipDataUpdate`);
+    if (skipDataUpdate) fs.unlinkSync(`${dataDir}/skipDataUpdate`);
+    console.log(`Update ${skipDataUpdate ? "Disabled" : "Enabled"}.`);
     for (let i = 0; i < args.length; i++) {
         if (args[i] === "-p" || args[i] === "--port") {
             port = parseInt(args[i + 1]);
