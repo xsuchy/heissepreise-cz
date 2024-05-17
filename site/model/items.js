@@ -142,10 +142,13 @@ class Items extends Model {
             item.search = intern(item.search.toLowerCase().replace(",", "."));
 
             const unitPriceFactor = item.unit == "g" || item.unit == "ml" ? 1000 : 1;
-            for (let i = 0; i < item.priceHistory.length; i++) {
-                const price = item.priceHistory[i];
-                price.unitPrice = (price.price / item.quantity) * unitPriceFactor;
-            }
+            if (item.store == "makro") {
+                for (let i = 0; i < item.priceHistory.length; i++) price.unitPrice = item.priceHistory[i].price;
+            } else
+                for (let i = 0; i < item.priceHistory.length; i++) {
+                    const price = item.priceHistory[i];
+                    price.unitPrice = (price.price / item.quantity) * unitPriceFactor;
+                }
         });
 
         items.sort((a, b) => {
