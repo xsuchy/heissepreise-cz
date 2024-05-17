@@ -143,7 +143,7 @@ class Items extends Model {
 
             const unitPriceFactor = item.unit == "g" || item.unit == "ml" ? 1000 : 1;
             if (item.store == "makro") {
-                for (let i = 0; i < item.priceHistory.length; i++) price.unitPrice = item.priceHistory[i].price;
+                for (let i = 0; i < item.priceHistory.length; i++) item.priceHistory[i].unitPrice = item.priceHistory[i].price;
             } else
                 for (let i = 0; i < item.priceHistory.length; i++) {
                     const price = item.priceHistory[i];
