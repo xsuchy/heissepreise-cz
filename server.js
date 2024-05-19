@@ -123,15 +123,16 @@ function setupLogging() {
             await analysis.updateData(dataDir);
             copyItemsToSite(dataDir);
         }
-        scheduleFunction(5, 0, 0, async () => {
-            items = await analysis.updateData(dataDir);
-            copyItemsToSite(dataDir);
-        });
-
-        sec.process();
     } else {
         copyItemsToSite(dataDir);
     }
+
+    sec.process();
+    scheduleFunction(5, 0, 0, async () => {
+        items = await analysis.updateData(dataDir);
+        sec.process();
+        copyItemsToSite(dataDir);
+    });
 
     const app = express();
     app.use(compression());

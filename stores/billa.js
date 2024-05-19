@@ -42,7 +42,9 @@ const subCategoryMap = {
 };
 
 exports.getCanonical = function (item, today) {
-    const price = item.price.regular.value / 100;
+    let price = item.price.regular;
+    if (item.weightPerPiece != 0) price = price.perStandardizedQuantity / 100;
+    else price = price.value / 100;
     return utils.convertUnit(
         {
             id: item.sku,
