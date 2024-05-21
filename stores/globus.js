@@ -94,7 +94,7 @@ exports.fetchData = async function () {
                 globusItems.push(data);
             }
         } catch (e) {
-            console.error(e.message);
+            console.error(`Globus ${e.message}`);
         }
     } while (page++ < lastPage);
     return globusItems;

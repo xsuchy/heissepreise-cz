@@ -287,6 +287,7 @@ exports.updateData = async function (dataDir, done) {
     const today = currentDate();
     console.log("Fetching data for date: " + today);
     const storeFetchPromises = [];
+    let finished = 0;
     for (const store of STORE_KEYS) {
         if (store == "kaufland" || store == "tesco") continue;
         storeFetchPromises.push(
@@ -314,7 +315,7 @@ exports.updateData = async function (dataDir, done) {
                     }
 
                     console.log(
-                        `Fetched ${store.toUpperCase()} data, took ${(performance.now() - start) / 1000} seconds, ${numUncategorized}/${
+                        `Fetched ${store.toUpperCase()} (${++finished}. of ${STORE_KEYS.length}) data, took ${(performance.now() - start) / 1000} seconds, ${numUncategorized}/${
                             items.length
                         } items without category.`
                     );
