@@ -52,17 +52,14 @@ exports.fetchData = async function () {
             },
         });
         let scripts = magics.getElementsByTagName("script");
-        let body = scripts
-            .pop()
-            .innerText.match(/(\{"bm-verify":.+:\s+)j\}\)/)
-            .pop();
-        let mth = scripts.pop().innerText.match(/(\d+)/g);
-        let j = Number(mth[0]) + Number(mth[1] + mth[2]);
-        body += j + "}";
+        let body = scripts.pop().innerText.match(/(\{"bm-verify":.+:\s+)/)[0];
+        let j = new Function(`${scripts[0].innerText}; return j`)();
+        body += j + "}";        
         fetchOpts.headers["content-type"] = "application/json";
         fetchOpts.headers["sec-fetch-dest"] = "empty";
         fetchOpts.headers["sec-fetch-mode"] = "cors";
         delete fetchOpts.headers["sec-fetch-user"];
+        delete fetchOpts.headers["upgrade-insecure-requests"];
         fetchOpts.headers.Referer = Url;
         fetchOpts.body = body;
         fetchOpts.method = "POST";
@@ -77,7 +74,11 @@ exports.fetchData = async function () {
                 }
             }
         });
+
         delete fetchOpts.body;
+        fetchOpts.headers["sec-fetch-dest"] = "document";
+        fetchOpts.headers["sec-fetch-mode"] = "navigate";
+        fetchOpts.headers["upgrade-insecure-requests"] = "1";
 
         return headers.cookie.join("; ");
     }
@@ -89,11 +90,11 @@ exports.fetchData = async function () {
     const baseUrl = "https://nakup.itesco.cz/groceries/cs-CZ/shop";
     let fetchOpts = {
         headers: {
-            accept: "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+            "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
             "accept-language": "cs,en;q=0.9,en-GB;q=0.8,en-US;q=0.7",
-            "cache-control": "no-cache",
-            pragma: "no-cache",
-            "sec-ch-ua": '"Not_A Brand";v="8", "Chromium";v="120", "Microsoft Edge";v="120"',
+            "cache-control": "max-age=0",
+            "priority": "u=0, i",
+            "sec-ch-ua": "\"Microsoft Edge\";v=\"125\", \"Chromium\";v=\"125\", \"Not.A/Brand\";v=\"24\"",
             "sec-ch-ua-mobile": "?0",
             "sec-ch-ua-platform": '"Windows"',
             "sec-fetch-dest": "document",

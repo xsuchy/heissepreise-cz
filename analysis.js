@@ -251,7 +251,7 @@ exports.replay = async (rawDataDir) => {
                 const item = items[i];
                 let category = stores[store].mapCategory(rawItem);
                 if (category)
-                    item.category = category;
+                     item.category = category;
             }
             return items;
         });
@@ -289,37 +289,42 @@ exports.updateData = async function (dataDir, done) {
     const storeFetchPromises = [];
     let finished = 0;
     for (const store of STORE_KEYS) {
-        if (store == "kaufland" || store == "tesco") continue;
+        if (store == "kaufland") continue;
         storeFetchPromises.push(
             new Promise(async (resolve) => {
                 const start = performance.now();
                 try {
                     const rawDataFile = `${dataDir}/${store}-${today}.json`;
                     let rawItems;
-                    if ("SKIP_FETCHING_STORE_DATA" in process.env && fs.existsSync(rawDataFile + "." + FILE_COMPRESSOR))
+                    if (store == "tesco" ||
+                        ("SKIP_FETCHING_STORE_DATA" in process.env && fs.existsSync(rawDataFile + "." + FILE_COMPRESSOR)))
                         rawItems = await readJSONAsync(rawDataFile + "." + FILE_COMPRESSOR);
                     else {
                         rawItems = await stores[store].fetchData();
                         writeJSON(rawDataFile, rawItems, FILE_COMPRESSOR);
                     }
-                    let sourceIdx = [];
-                    const items = exports.dedupItems(getCanonicalFor(store, rawItems, today), sourceIdx);
+                    if (store == "tesco") {
+                        resolve(rawItems);
+                    } else {
+                        let sourceIdx = [];
+                        const items = exports.dedupItems(getCanonicalFor(store, rawItems, today), sourceIdx);
 
-                    await stores[store].initializeCategoryMapping(rawItems);
-                    let numUncategorized = 0;
-                    for (let i = 0; i < items.length; i++) {
-                        const rawItem = rawItems[sourceIdx[i]];
-                        const item = items[i];
-                        item.category = stores[store].mapCategory(rawItem, item); // both could be unrelated ?!
-                        if (item.category == null) numUncategorized++;
+                        await stores[store].initializeCategoryMapping(rawItems);
+                        let numUncategorized = 0;
+                        for (let i = 0; i < items.length; i++) {
+                            const rawItem = rawItems[sourceIdx[i]];
+                            const item = items[i];
+                            item.category = stores[store].mapCategory(rawItem, item); // both could be unrelated ?!
+                            if (item.category == null) numUncategorized++;
+                        }
+
+                        console.log(
+                            `Fetched ${store.toUpperCase()} (${++finished}. of ${STORE_KEYS.length}) data, took ${
+                                (performance.now() - start) / 1000
+                            } seconds, ${numUncategorized}/${items.length} items without category.`
+                        );
+                        resolve(items);
                     }
-
-                    console.log(
-                        `Fetched ${store.toUpperCase()} (${++finished}. of ${STORE_KEYS.length}) data, took ${(performance.now() - start) / 1000} seconds, ${numUncategorized}/${
-                            items.length
-                        } items without category.`
-                    );
-                    resolve(items);
                 } catch (e) {
                     console.error(`Error while fetching data from ${store}, continuing after ${(performance.now() - start) / 1000} seconds...`, e);
                     resolve([]);
