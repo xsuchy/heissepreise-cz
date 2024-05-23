@@ -62,7 +62,17 @@ class Carts extends Model {
             const items = [];
             for (const cartItem of cart.items) {
                 const item = itemsLookup[cartItem.store + cartItem.id];
-                if (item) items.push(item);
+                if (item) {
+                    if (cartItem.quantity != item.quantity && cartItem.unit == item.unit) {
+                        const coef = cartItem.quantity / item.quantity;
+                        item.price *= coef;
+                        item.quantity *= coef;
+                        for (let h of item.priceHistory) {
+                            h.price *= coef;
+                        }
+                    }
+                    items.push(item);
+                }
             }
             cart.items = items;
         }
@@ -75,7 +85,7 @@ class Carts extends Model {
             carts.push({
                 name: cart.name,
                 items: cart.items.map((item) => {
-                    return { store: item.store, id: item.id };
+                    return { store: item.store, id: item.id, quantity: item.quantity, unit: item.unit };
                 }),
             });
         }

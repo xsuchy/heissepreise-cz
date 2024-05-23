@@ -8,7 +8,7 @@
             "category": "zeH001",
             "isWeighted": false,
             "unit": "g",
-            "quantity": 800,
+            "quantity": 1000,
             "bio": false,
             "available": true,
             "url": "https://www.albert.cz/shop/Maso-a-ryby/Veprove/Kotlety-zebra-bok/Veprova-pecene-bez-kosti-v-celku/p/22840226"
@@ -32,7 +32,7 @@
             "category": "zeJ001",
             "isWeighted": false,
             "unit": "g",
-            "quantity": 100,
+            "quantity": 1000,
             "bio": false,
             "available": true,
             "url": "https://www.albert.cz/shop/Mlecne-a-chlazene/Syry/Platkove/Eidam/Madeta-Jihocesky-Eidam-30-platky/p/26982755"
@@ -92,7 +92,7 @@
             "category": "zeF001",
             "isWeighted": false,
             "unit": "g",
-            "quantity": 1200,
+            "quantity": 1000,
             "bio": false,
             "available": true,
             "url": "https://www.albert.cz/shop/Pekarna-a-cukrarna/Chleb-volny/Svetly/Chleb-Sumava/p/20480882"
@@ -104,7 +104,7 @@
             "category": "zeF001",
             "isWeighted": false,
             "unit": "g",
-            "quantity": 43,
+            "quantity": 1000,
             "bio": false,
             "available": true,
             "url": "https://www.albert.cz/shop/Pekarna-a-cukrarna/Slane-pecivo-volne/Rohliky/Rohlik/p/20480905"
@@ -140,7 +140,7 @@
             "category": "zeG001",
             "isWeighted": false,
             "unit": "g",
-            "quantity": 170,
+            "quantity": 1000,
             "bio": false,
             "available": true,
             "url": "https://www.albert.cz/shop/Ovoce-a-zelenina/Zelenina/Brambory-a-cibuloviny/Brambory-konzumni-rane/p/20453770"
@@ -152,7 +152,7 @@
             "category": "zeG001",
             "isWeighted": false,
             "unit": "g",
-            "quantity": 200,
+            "quantity": 1000,
             "bio": false,
             "available": true,
             "url": "https://www.albert.cz/shop/Ovoce-a-zelenina/Ovoce/Jablka-a-hrusky/Jablka-cervena/p/20902216"

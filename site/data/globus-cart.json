@@ -9,7 +9,7 @@
             "price": 159.2,
             "isWeighted": false,
             "unit": "g",
-            "quantity": 800,
+            "quantity": 1000,
             "bio": false,
             "available": true,
             "url": "https://shop.iglobus.cz/cz/vepov-peen-kotleta-bez-kosti-globus/218505"
@@ -35,7 +35,7 @@
             "price": 37.8,
             "isWeighted": false,
             "unit": "g",
-            "quantity": 200,
+            "quantity": 1000,
             "bio": false,
             "available": true,
             "url": "https://shop.iglobus.cz/cz/sr-eidam-30-pltky/286457"
@@ -61,7 +61,7 @@
             "price": 40.9,
             "isWeighted": false,
             "unit": "kus",
-            "quantity": 6,
+            "quantity": 10,
             "bio": false,
             "available": true,
             "url": "https://shop.iglobus.cz/cz/schubert-erstv-vejce-omega-pro-podestlkov-m-6-ks/8594032855124"
@@ -100,7 +100,7 @@
             "price": 43.5,
             "isWeighted": false,
             "unit": "g",
-            "quantity": 1200,
+            "quantity": 1000,
             "bio": false,
             "available": true,
             "url": "https://shop.iglobus.cz/cz/chlb-rodinn-globus-1200-g/103004"
@@ -113,7 +113,7 @@
             "price": 2.7,
             "isWeighted": false,
             "unit": "g",
-            "quantity": 43,
+            "quantity": 1000,
             "bio": false,
             "available": true,
             "url": "https://shop.iglobus.cz/cz/penam-rohlk-43g/1000514007"
@@ -165,7 +165,7 @@
             "price": 4.91,
             "isWeighted": false,
             "unit": "g",
-            "quantity": 170,
+            "quantity": 1000,
             "bio": false,
             "available": true,
             "url": "https://shop.iglobus.cz/cz/jablka-erven-voln/1015404007"

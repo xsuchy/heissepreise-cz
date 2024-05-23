@@ -100,7 +100,7 @@
             "price": 42.5,
             "isWeighted": false,
             "unit": "g",
-            "quantity": 1200,
+            "quantity": 1000,
             "bio": false,
             "available": true,
             "url": "https://shop.billa.cz/produkt/chleb-konzumni-s-kminem-82316365"
@@ -113,7 +113,7 @@
             "price": 2.7,
             "isWeighted": false,
             "unit": "g",
-            "quantity": 43,
+            "quantity": 1000,
             "bio": false,
             "available": true,
             "url": "https://shop.billa.cz/produkt/rohlik-43g-82316363"
