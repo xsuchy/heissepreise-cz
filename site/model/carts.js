@@ -15,38 +15,45 @@ class Carts extends Model {
         const val = localStorage.getItem("carts");
         let carts = (this._carts = val ? JSON.parse(val) : []);
 
-        // Add Momentum cart if it is not in the list of carts
-        if (!localStorage.getItem("updatedMomentum") || !carts.some((cart) => cart.name === "Momentum Eigenmarken Vergleich")) {
-            localStorage.setItem("updatedMomentum", "true");
-            const momentumCart = await misc.fetchJSON("data/momentum-cart.new.json");
-            carts.unshift(momentumCart);
+        const oldCarts = {
+            "Markenprodukte Billa/Spar": 0,
+            "Diskont-Marken Produkte Billa/Spar": 0,
+            "Bio Eigenmarken Produkte Billa/Spar": 0,
+            "Mittelpreisige Eigenmarken Produkte Billa/Spar": 0,
+            "Momentum Eigenmarken Vergleich": 0,
+        };
+        let remove = carts.filter((cart) => oldCarts[cart.name] == 0);
+        for (let c of remove) {
+            if (c.items.length == 0) {
+                this.remove(c.name);
+            }
         }
 
         if (!localStorage.getItem("updatedKnnCarts")) {
             localStorage.setItem("updatedKnnCarts", "true");
-            carts = this._carts = carts.filter((cart) => cart.name != "Markenprodukte Billa/Spar");
-            carts = this._carts = carts.filter((cart) => cart.name != "Diskont-Marken Produkte Billa/Spar");
-            carts = this._carts = carts.filter((cart) => cart.name != "Bio Eigenmarken Produkte Billa/Spar");
-            carts = this._carts = carts.filter((cart) => cart.name != "Mittelpreisige Eigenmarken Produkte Billa/Spar");
+            carts = this._carts = carts.filter((cart) => cart.name != "Spotřební koš - Albert");
+            carts = this._carts = carts.filter((cart) => cart.name != "Spotřební koš - Billa");
+            carts = this._carts = carts.filter((cart) => cart.name != "Spotřební koš - Globus");
+            carts = this._carts = carts.filter((cart) => cart.name != "Spotřební koš - Tesco");
         }
 
-        if (!carts.some((cart) => cart.name == "Markenprodukte Billa/Spar")) {
-            const billaSparCart = await misc.fetchJSON("data/billa-spar-cart.json");
+        if (!carts.some((cart) => cart.name == "Spotřební koš - Albert")) {
+            const billaSparCart = await misc.fetchJSON("data/albert-cart.json");
             carts.unshift(billaSparCart);
         }
 
-        if (!carts.some((cart) => cart.name == "Diskont-Marken Produkte Billa/Spar")) {
-            const budgetCart = await misc.fetchJSON("data/budget-cart.json");
+        if (!carts.some((cart) => cart.name == "Spotřební koš - Billa")) {
+            const budgetCart = await misc.fetchJSON("data/billa-cart.json");
             carts.unshift(budgetCart);
         }
 
-        if (!carts.some((cart) => cart.name == "Bio Eigenmarken Produkte Billa/Spar")) {
-            const budgetCart = await misc.fetchJSON("data/bio-cart.json");
+        if (!carts.some((cart) => cart.name == "Spotřební koš - Globus")) {
+            const budgetCart = await misc.fetchJSON("data/globus-cart.json");
             carts.unshift(budgetCart);
         }
 
-        if (!carts.some((cart) => cart.name == "Mittelpreisige Eigenmarken Produkte Billa/Spar")) {
-            const budgetCart = await misc.fetchJSON("data/midrange-cart.json");
+        if (!carts.some((cart) => cart.name == "Spotřební koš - Tesco")) {
+            const budgetCart = await misc.fetchJSON("data/tesco-cart.json");
             carts.unshift(budgetCart);
         }
 
