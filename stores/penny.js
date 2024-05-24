@@ -17,13 +17,17 @@ exports.getCanonical = function (item, today) {
     let quantity = item.amount;
     let unit = item.volumeLabelKey;
     if (!item.price) return null;
+    let price = (item.price.loyalty?.value ?? item.price.regular.value) / 100
+    if ((item.price?.validityStart > today) ||
+    (item.price?.validityEnd < today))
+        price = Math.max(price, item.price?.crossed / 100);
     return utils.convertUnit(
         {
             id: item.productId,
             name: item.name,
             // description: "", not available
-            price: item.price.regular.value / 100,
-            priceHistory: [{ date: today, price: item.price.regular.value / 100 }],
+            price: price,
+            priceHistory: [{ date: today, price: price }],
             isWeighted: item.isWeightArticle,
             unit,
             quantity,
@@ -35,7 +39,7 @@ exports.getCanonical = function (item, today) {
     );
 };
 
-exports.fetchData = async function () {
+exports.fetchData = async function (local) {
     hits = 100;
     page = 0;
     done = false;
@@ -49,6 +53,21 @@ exports.fetchData = async function () {
     }
     return result;
 };
+async function saveLocal()
+{
+    const fs = require("fs");
+    let data = await exports.fetchData(1); 
+    const tdy = (new Date()).toISOString().substr(0,10);
+    for(let i=0;i<data.length;i++)
+    {
+        data[i] = exports.getCanonical(data[i], tdy);
+    }
+    fs.writeFileSync("penny.json", JSON.stringify(data,0,2));
+    debugger;
+}
+if (require.main === module) {
+    saveLocal();
+}
 
 async function parseCategory(url, parent, result, lookup) {
     const data = (await axios.get(url)).data;
