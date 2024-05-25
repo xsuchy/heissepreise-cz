@@ -1,0 +1,607 @@
+{
+    "name": "Spotřební koš - Globus(86)",
+    "items": [
+        {
+            "store": "globus",
+            "id": "8594159720404_abstract",
+            "name": "Rýže loupaná dlouhozrnná [1 kg] Arax Rýže premium bílá dlouhozrnná 1 kg",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "globus",
+            "id": "2040000227012_abstract",
+            "name": "Pšeničná mouka hladká [1 kg] Váš Výběr Hladká mouka pšeničná 1kg",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "globus",
+            "id": "103004_abstract",
+            "name": "Chléb konzumní kmínový [1 kg] Chléb Rodinný Globus 1200 g",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "globus",
+            "id": "100051_abstract",
+            "name": "Pečivo pšeničné bílé [1 kg] Penam Rohlík 43g",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "globus",
+            "id": "103054_abstract",
+            "name": "Máslový koláč z kynutého těsta [1 kg] Globus Koláč s náplní tvarohovou 70 g",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "globus",
+            "id": "8696646010439_abstract",
+            "name": "Sušenky slepované nemáčené [1 kg] Golda Keyf Sušenky s vanilkovým krémem 140g",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "globus",
+            "id": "4306188034582_abstract",
+            "name": "Piškoty dětské světlé [100 g] MyPrice Piškoty dětské 240g",
+            "unit": "g",
+            "quantity": 100
+        },
+        {
+            "store": "globus",
+            "id": "8593912010660_abstract",
+            "name": "Těstoviny vaječné [1 kg] Zátka Vaječné těstoviny polévkové nudle 500 g",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "globus",
+            "id": "218602_abstract",
+            "name": "Hovězí maso zadní bez kosti [1 kg] Hovězí plátky kýta, plec 2ks Globus",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "globus",
+            "id": "218606_abstract",
+            "name": "Hovězí maso přední bez kosti [1 kg] Hovězí hrudí bez kosti Globus",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "globus",
+            "id": "218608_abstract",
+            "name": "Hovězí maso přední s kostí [1 kg] Hovězí žebro s kostí Globus",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "globus",
+            "id": "218501_abstract",
+            "name": "Vepřová kýta bez kosti [1 kg] Vepřová kýta spodní šál Globus",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "globus",
+            "id": "218507_abstract",
+            "name": "Vepřová krkovice [1 kg] Vepřová krkovice bez kosti Globus",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "globus",
+            "id": "218508_abstract",
+            "name": "Vepřová plec [1 kg] Vepřová plec bez kosti Globus",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "globus",
+            "id": "218510_abstract",
+            "name": "Vepřový bůček [1 kg] Vepřový bok bez kosti Globus",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "globus",
+            "id": "218505_abstract",
+            "name": "Vepřová pečeně [1 kg] Vepřová pečeně (kotleta) bez kosti Globus",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "globus",
+            "id": "2070000248175_abstract",
+            "name": "Kuřata kuchaná celá [1 kg] Kuře celé bez drobů",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "globus",
+            "id": "2070000248205_abstract",
+            "name": "Kuřecí prsní řízky [1 kg] Kuřecí prsní řízky bez kosti a kůže",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "globus",
+            "id": "2070000248236_abstract",
+            "name": "Kuřecí stehna [1 kg] Kuřecí stehna",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "globus",
+            "id": "5908310346755_abstract",
+            "name": "Kachny kuchané [1 kg] Kachna A bez drobů mražená 2,2kg",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "globus",
+            "id": "2801510000003_abstract",
+            "name": "Krůtí prsní řízky [1 kg] Krůtí prsní řízek bez kosti bez kůže",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "globus",
+            "id": "8594011964007_abstract",
+            "name": "Králík domácí [1 kg] Rabbit Králík celý bez hlavy mražený 1250 g",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "globus",
+            "id": "4306188020998_abstract",
+            "name": "Párky [1 kg] MyPrice Kuřecí párky 280g",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "globus",
+            "id": "2040000221591_abstract",
+            "name": "Šunkový salám [1 kg] Váš Výběr Šunkový salám krájený 90 % 100g",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "globus",
+            "id": "8594017366461_abstract",
+            "name": "Papriková klobása [1 kg] Sláma Spišská klobása 260g",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "globus",
+            "id": "8595010300988_abstract",
+            "name": "Poličan [1 kg] Bivoj Poličan 840 g",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "globus",
+            "id": "8594026121969_abstract",
+            "name": "Šunka vepřová [1 kg] Le & Co Šunka vepřová dušená nejvyšší jakosti shaved 180 g",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "globus",
+            "id": "8595624789933_abstract",
+            "name": "Losos filet [1 kg] Nowaco Losos gorbuša filet bez kostí, s kůží MSC Nowaco 500g",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "globus",
+            "id": "2001800034422_abstract",
+            "name": "Kapr chlazený [1 kg] Kapr uzený porce",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "globus",
+            "id": "8595624786741_abstract",
+            "name": "Filé mražené [1 kg] Nowaco Filé porce max 1kg",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "globus",
+            "id": "8594007800197_abstract",
+            "name": "Pstruh [1 kg] Holandský pstruh 900g",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "globus",
+            "id": "8594166900035_abstract",
+            "name": "Mléko plnotučné trvanlivé [1 l] Pragolaktos Trvanlivé mléko 3,5% plnotučné 1 l",
+            "unit": "ml",
+            "quantity": 1000
+        },
+        {
+            "store": "globus",
+            "id": "2040000200312_abstract",
+            "name": "Mléko polotučné pasterované [1 l] Čerstvé mléko polotučné 1l",
+            "unit": "ml",
+            "quantity": 1000
+        },
+        {
+            "store": "globus",
+            "id": "8592206342302_abstract",
+            "name": "Mléko polotučné trvanlivé [1 l] Bohemilk mléko trvanlivé polotučné 1,5% 1l",
+            "unit": "ml",
+            "quantity": 1000
+        },
+        {
+            "store": "globus",
+            "id": "4306188413172_abstract",
+            "name": "Kondenzované mléko neslazené [500 g] Jeden Tag Kondenzované mléko 7,5% 340g",
+            "unit": "g",
+            "quantity": 500
+        },
+        {
+            "store": "globus",
+            "id": "8593807517304_abstract",
+            "name": "Jogurt bílý netučný [150 g] Olma Klasik bílý jogurt 150 g",
+            "unit": "g",
+            "quantity": 150
+        },
+        {
+            "store": "globus",
+            "id": "8593807567132_abstract",
+            "name": "Smetanový jogurt ovocný [150 g] Olma Florian Smetanový jogurt jahoda 150 g",
+            "unit": "g",
+            "quantity": 150
+        },
+        {
+            "store": "globus",
+            "id": "286457_abstract",
+            "name": "Eidamská cihla [1 kg] Sýr Eidam 30% plátky",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "globus",
+            "id": "8594008270012_abstract",
+            "name": "Hermelín [1 kg] Sedlčanský Hermelín originál 100g",
+            "unit": "g",
+            "quantity": 100
+        },
+        {
+            "store": "globus",
+            "id": "8593803346618_abstract",
+            "name": "Tavený sýr neochucený [1 kg] Madeta Báječný český tavený sýr lahodný 44% 140g",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "globus",
+            "id": "8594008278742_abstract",
+            "name": "Lučina [1 kg] Lučina přírodní pro celou rodinu 180g",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "globus",
+            "id": "8593803336916_abstract",
+            "name": "Niva [1 kg] Jihočeská Niva 45% 100g",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "globus",
+            "id": "286129_abstract",
+            "name": "Gouda [1 kg] Sýr Gouda 30% plátky",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "globus",
+            "id": "85905962_abstract",
+            "name": "Tvaroh měkký konzumní [1 kg] Milko Tvaroh z Poděbrad měkký 250 g",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "globus",
+            "id": "8594166900066_abstract",
+            "name": "Smetana sladká trvanlivá [1 l] Trvanlivá smetana 10% 0,5 l",
+            "unit": "ml",
+            "quantity": 1000
+        },
+        {
+            "store": "globus",
+            "id": "8594009850015_abstract",
+            "name": "Tradiční pomazánkové [1 kg] Krajanka Tradiční pomazánkové natur 200g",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "globus",
+            "id": "2040000224554_abstract",
+            "name": "Zakysané mléčné výrobky [1 kg] Váš Výběr Zakysaná smetana 18% 400g",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "globus",
+            "id": "8594032855124_abstract",
+            "name": "Vejce slepičí čerstvá [10 ks] Schubert Čerstvá vejce Omega Pro podestýlková M 6 ks",
+            "unit": "kus",
+            "quantity": 10
+        },
+        {
+            "store": "globus",
+            "id": "4025500156015_abstract",
+            "name": "Máslo [1 kg] Pragolaktos Máslo 250 g",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "globus",
+            "id": "8719200255739_abstract",
+            "name": "Rostlinný roztíratelný tuk [1 kg] Liga 450g",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "globus",
+            "id": "4000351109205_abstract",
+            "name": "Olej rostlinný [1 l] Brölio Řepkový olej 1 l",
+            "unit": "ml",
+            "quantity": 1000
+        },
+        {
+            "store": "globus",
+            "id": "4306188015475_abstract",
+            "name": "Vepřové sádlo škvařené [1 kg] MyPrice Vepřové sádlo hřbetní 250g",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "globus",
+            "id": "101315_abstract",
+            "name": "Pomeranče [1 kg] Pomeranče volné",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "globus",
+            "id": "8412276172077_abstract",
+            "name": "Citrony [1 kg] Citróny volné",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "globus",
+            "id": "101325_abstract",
+            "name": "Banány žluté [1 kg] Banány volné",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "globus",
+            "id": "101540_abstract",
+            "name": "Jablka konzumní [1 kg] Jablka červená volná",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "globus",
+            "id": "101772_abstract",
+            "name": "Hrozny stolní [1 kg] Hrozny bílé bezsemenné",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "globus",
+            "id": "2070000455894_abstract",
+            "name": "Rajská jablka červená kulatá [1 kg] Rajčata červená balená 1kg",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "globus",
+            "id": "8412276299538_abstract",
+            "name": "Okurky salátové [1 kg] Okurka hadovka 1 ks",
+            "unit": "kus",
+            "quantity": 3.33
+        },
+        {
+            "store": "globus",
+            "id": "101287_abstract",
+            "name": "Papriky [1 kg] Paprika bílá volná",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "globus",
+            "id": "101469_abstract",
+            "name": "Zelí hlávkové bílé [1 kg] Zelí hlávkové bílé rané",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "globus",
+            "id": "107208_abstract",
+            "name": "Květák bílý celý [1 kus] Květák bílý 1 ks",
+            "unit": "kus",
+            "quantity": 1
+        },
+        {
+            "store": "globus",
+            "id": "101440_abstract",
+            "name": "Mrkev [1 kg] Mrkev",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "globus",
+            "id": "101045_abstract",
+            "name": "Celer [1 kg] Celer bulvový praný",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "globus",
+            "id": "101046_abstract",
+            "name": "Cibule suchá [1 kg] Cibule žlutá",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "globus",
+            "id": "101083_abstract",
+            "name": "Česnek suchý [1 kg] Česnek",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "globus",
+            "id": "107023_abstract",
+            "name": "Brokolice [1 ks] Brokolice 1ks",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "globus",
+            "id": "107353_abstract",
+            "name": "Salát ledový [1 ks] Salát ledový balený 1 ks",
+            "unit": "kus",
+            "quantity": 1
+        },
+        {
+            "store": "globus",
+            "id": "8588001884079_abstract",
+            "name": "Nakládané zelí [1 kg] Zelí kysané bílé 1000 g",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "globus",
+            "id": "101013_abstract",
+            "name": "Konzumní brambory [1 kg] Brambory konzumní rané volné",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "globus",
+            "id": "8594000230250_abstract",
+            "name": "Cukr krystalový [1 kg] TTD Cukr Krystal bílý 1 kg",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "globus",
+            "id": "8594000232056_abstract",
+            "name": "Cukr moučkový [1 kg] TTD Cukr moučka 1 kg",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "globus",
+            "id": "8594003430879_abstract",
+            "name": "Pravý včelí med [1 kg] Medokomerc Med luční 900 g",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "globus",
+            "id": "4306188377580_abstract",
+            "name": "Čokoláda mléčná tabulková [100 g] Jeden Tag Čokoláda mléčná 100g",
+            "unit": "g",
+            "quantity": 100
+        },
+        {
+            "store": "globus",
+            "id": "8590014838123_abstract",
+            "name": "Dětská výživa [220 g] Hello Ovocná přesnídávka banán sklo 190 g",
+            "unit": "g",
+            "quantity": 220
+        },
+        {
+            "store": "globus",
+            "id": "8592084415754_abstract",
+            "name": "Sušené mléko pro kojeneckou výživu [500 g] Sunar Complex 3 batolecí mléko banán 600 g",
+            "unit": "g",
+            "quantity": 500
+        },
+        {
+            "store": "globus",
+            "id": "8711000515297_abstract",
+            "name": "Káva rozpustná [100 g] Jacobs Velvet Rozpustná káva 200 g",
+            "unit": "g",
+            "quantity": 100
+        },
+        {
+            "store": "globus",
+            "id": "9120049410224_abstract",
+            "name": "Káva zrnková pražená [100 g] Cefe Peppino Roma zrnková káva 1 kg",
+            "unit": "g",
+            "quantity": 100
+        },
+        {
+            "store": "globus",
+            "id": "5900396000910_abstract",
+            "name": "Čaj černý porcovaný [100 g] Minutka Černý čaj porcovaný 100 x 1,4g",
+            "unit": "g",
+            "quantity": 100
+        },
+        {
+            "store": "globus",
+            "id": "4306188018636_abstract",
+            "name": "Kakaový prášek [100 g] MyPrice Kakao holandského typu 100 g",
+            "unit": "g",
+            "quantity": 100
+        },
+        {
+            "store": "globus",
+            "id": "8594005530362_abstract",
+            "name": "Přírodní minerální voda uhličitá [1 l] Korunní Přírodní jemně perlivá minerální voda 1,5 l",
+            "unit": "ml",
+            "quantity": 1000
+        },
+        {
+            "store": "globus",
+            "id": "9009473000075_abstract",
+            "name": "Nealkoholický nápoj s ovocnou příchutí [1 l] Jeden Tag Jablečná šťáva 100% 1l",
+            "unit": "ml",
+            "quantity": 1000
+        },
+        {
+            "store": "globus",
+            "id": "8594000201892_abstract",
+            "name": "Tuzemský tmavý (Tuzemák) [1 l] Royal Krásnobřezenský Tuzemský 37,5% 1 l",
+            "unit": "ml",
+            "quantity": 1000
+        },
+        {
+            "store": "globus",
+            "id": "8594005011519_abstract",
+            "name": "Vodka jemná [1 l] Amundsen vodka 1 l",
+            "unit": "ml",
+            "quantity": 1000
+        },
+        {
+            "store": "globus",
+            "id": "8594002881047_abstract",
+            "name": "Jakostní víno červené - od 2015 [0,75 l] Víno Motýl Tramín červený 750 ml",
+            "unit": "ml",
+            "quantity": 750
+        },
+        {
+            "store": "globus",
+            "id": "8594403110418_abstract",
+            "name": "Pivo výčepní, světlé, lahvové [0,5 l] Budweiser Budvar Classic světlé výčepní pivo lahev 0,5 l",
+            "unit": "ml",
+            "quantity": 500
+        }
+    ]
+}

@@ -1,0 +1,607 @@
+{
+    "name": "Spotřební koš - Tesco(86)",
+    "items": [
+        {
+            "store": "tesco",
+            "id": "2005100501435",
+            "name": "Rýže loupaná dlouhozrnná [1 kg] Tesco Rýže dlouhozrnná loupaná 1kg",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "tesco",
+            "id": "2001019423307",
+            "name": "Pšeničná mouka hladká [1 kg] Mlýny J. Voženílek Předměřická mouka pšeničná světlá hladká 1kg",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "tesco",
+            "id": "2001014897691",
+            "name": "Chléb konzumní kmínový [1 kg] Tesco Chléb konzumní 1200g",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "tesco",
+            "id": "2001000151875",
+            "name": "Pečivo pšeničné bílé [1 kg] Rohlík tukový 43g",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "tesco",
+            "id": "2001019639937",
+            "name": "Máslový koláč z kynutého těsta [1 kg] Koláč tvarohový s máslovou drobenkou 75g",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "tesco",
+            "id": "2005105009863",
+            "name": "Sušenky slepované nemáčené [1 kg] Milka sušenky Choco pause 260g",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "tesco",
+            "id": "2001000009282",
+            "name": "Piškoty dětské světlé [100 g] Opavia Piškoty tradiční 240g",
+            "unit": "g",
+            "quantity": 100
+        },
+        {
+            "store": "tesco",
+            "id": "2005100501320",
+            "name": "Těstoviny vaječné [1 kg] Hearty Food Co. Vlasové nudle 250g",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "tesco",
+            "id": "2005105009689",
+            "name": "Hovězí maso zadní bez kosti [1 kg] Tesco Hovězí zadní bez kosti",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "tesco",
+            "id": "2001013982701",
+            "name": "Hovězí maso přední bez kosti [1 kg] Hovězí kližka bez kosti volná",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "tesco",
+            "id": "2001013982695",
+            "name": "Hovězí maso přední s kostí [1 kg] Hovězí přední žebro s kostí volné",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "tesco",
+            "id": "2001013982503",
+            "name": "Vepřová kýta bez kosti [1 kg] Vepřová kýta bez kosti volná",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "tesco",
+            "id": "2001013982480",
+            "name": "Vepřová krkovice [1 kg] Vepřová krkovice bez kosti",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "tesco",
+            "id": "2001013982497",
+            "name": "Vepřová plec [1 kg] Vepřová plec bez kosti",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "tesco",
+            "id": "2001013982459",
+            "name": "Vepřový bůček [1 kg] Vepřová pečeně bez kosti volná",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "tesco",
+            "id": "2005105010097",
+            "name": "Vepřová pečeně [1 kg] Tesco Vepřový bok špička",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "tesco",
+            "id": "2001012124188",
+            "name": "Kuřata kuchaná celá [1 kg] Tesco Kuře celé bez drobů",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "tesco",
+            "id": "2001012124270",
+            "name": "Kuřecí prsní řízky [1 kg] Tesco Kuřecí prsní řízek",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "tesco",
+            "id": "2001005390101",
+            "name": "Kuřecí stehna [1 kg] Tesco Kuřecí stehna",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "tesco",
+            "id": "2001130344183",
+            "name": "Kachny kuchané [1 kg] KrakauerLand Kachna bez drobů 2400g",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "tesco",
+            "id": "2001019272219",
+            "name": "Krůtí prsní řízky [1 kg] Tesco Krůtí prsní řízek",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "tesco",
+            "id": "2001017367979",
+            "name": "Králík domácí [1 kg] Tesco Králík bez hlavy",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "tesco",
+            "id": "2001130492561",
+            "name": "Párky [1 kg] Kuřecí párky striptýzky",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "tesco",
+            "id": "2001130457310",
+            "name": "Šunkový salám [1 kg] Kostelecké Uzeniny Šunkový salám 0,400kg",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "tesco",
+            "id": "2001120669466",
+            "name": "Papriková klobása [1 kg] Maso West Papriková klobása pikant",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "tesco",
+            "id": "2001018194550",
+            "name": "Poličan [1 kg] Krahulík Poličan 0,350kg",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "tesco",
+            "id": "2001120834242",
+            "name": "Šunka vepřová [1 kg] Kostelecké Uzeniny Vepřová šunka euro standardní",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "tesco",
+            "id": "2001120272819",
+            "name": "Losos filet [1 kg] Mylord Losos filety 500g",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "tesco",
+            "id": "2001130830254",
+            "name": "Kapr chlazený [1 kg] Rybářství Chlumec Nad Cidlinou Kapr řízky s kůží čerstvé chlazené",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "tesco",
+            "id": "2005100579670",
+            "name": "Filé mražené [1 kg] Tesco Filé z tresky aljašské 400g",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "tesco",
+            "id": "2001018199616",
+            "name": "Pstruh [1 kg] Tesco Pstruh duhový celý kuchaný",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "tesco",
+            "id": "2001018131135",
+            "name": "Mléko plnotučné trvanlivé [1 l] Madeta Jihočeské trvanlivé mléko plnotučné 3,5% 1l",
+            "unit": "ml",
+            "quantity": 1000
+        },
+        {
+            "store": "tesco",
+            "id": "2001020180318",
+            "name": "Mléko polotučné pasterované [1 l] Tesco Čerstvé polotučné mléko 1,5% 1l",
+            "unit": "ml",
+            "quantity": 1000
+        },
+        {
+            "store": "tesco",
+            "id": "2001018131111",
+            "name": "Mléko polotučné trvanlivé [1 l] Madeta Jihočeské trvanlivé mléko polotučné 1,5% 1l",
+            "unit": "ml",
+            "quantity": 1000
+        },
+        {
+            "store": "tesco",
+            "id": "2001120856550",
+            "name": "Kondenzované mléko neslazené [500 g] Tesco Zahuštěné neslazené plnotučné mléko 340g",
+            "unit": "g",
+            "quantity": 500
+        },
+        {
+            "store": "tesco",
+            "id": "2001000348527",
+            "name": "Jogurt bílý netučný [150 g] Olma Klasik originál bílý jogurt 150g",
+            "unit": "g",
+            "quantity": 150
+        },
+        {
+            "store": "tesco",
+            "id": "2001000348565",
+            "name": "Smetanový jogurt ovocný [150 g] Olma Florian Smetanový jogurt jahoda 150g",
+            "unit": "g",
+            "quantity": 150
+        },
+        {
+            "store": "tesco",
+            "id": "2001000135622",
+            "name": "Eidamská cihla [1 kg] Eidam 30% t.v.s. (krájený)",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "tesco",
+            "id": "2001013595475",
+            "name": "Hermelín [1 kg] Sedlčanský Hermelín originál 2 x 100g (200g)",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "tesco",
+            "id": "2001130629539",
+            "name": "Tavený sýr neochucený [1 kg] Tesco Tavený sýr 90g",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "tesco",
+            "id": "2001012599771",
+            "name": "Lučina [1 kg] Lučina 120g",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "tesco",
+            "id": "2001015296479",
+            "name": "Niva [1 kg] Tesco Niva 100g",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "tesco",
+            "id": "2001018868970",
+            "name": "Gouda [1 kg] Gouda sýr (krájený)",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "tesco",
+            "id": "2001130586076",
+            "name": "Tvaroh měkký konzumní [1 kg] Tesco Tvaroh odtučněný 250g",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "tesco",
+            "id": "2001120856481",
+            "name": "Smetana sladká trvanlivá [1 l] Tesco Smetana 10% trvanlivá 500ml",
+            "unit": "ml",
+            "quantity": 1000
+        },
+        {
+            "store": "tesco",
+            "id": "2001019039300",
+            "name": "Tradiční pomazánkové [1 kg] Madeta Jihočeské pomazánkové tradiční bez příchuti 150g",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "tesco",
+            "id": "2001020180320",
+            "name": "Zakysané mléčné výrobky [1 kg] Tesco Smetana zakysaná 14 % 375g",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "tesco",
+            "id": "2001019279706",
+            "name": "Vejce slepičí čerstvá [10 ks] Tesco Čerstvá vejce z halového chovu M 10 ks",
+            "unit": "kus",
+            "quantity": 10
+        },
+        {
+            "store": "tesco",
+            "id": "2001015351291",
+            "name": "Máslo [1 kg] Máslo 250g",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "tesco",
+            "id": "2001020347650",
+            "name": "Rostlinný roztíratelný tuk [1 kg] Tesco Creamfields rostlinný roztíratelný tuk 500g",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "tesco",
+            "id": "2001120034699",
+            "name": "Olej rostlinný [1 l] Tesco Olej řepkový 1l",
+            "unit": "ml",
+            "quantity": 1000
+        },
+        {
+            "store": "tesco",
+            "id": "2001017337026",
+            "name": "Vepřové sádlo škvařené [1 kg] Tesco Škvařené vepřové sádlo 250g",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "tesco",
+            "id": "2001013564617",
+            "name": "Pomeranče [1 kg] Tesco Pomeranče 1kg",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "tesco",
+            "id": "2001013564877",
+            "name": "Citrony [1 kg] Tesco Citróny 500g",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "tesco",
+            "id": "2001012690126",
+            "name": "Banány žluté [1 kg] Banány",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "tesco",
+            "id": "2001014948058",
+            "name": "Jablka konzumní [1 kg] Jablka červená",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "tesco",
+            "id": "2001012691772",
+            "name": "Hrozny stolní [1 kg] Hrozny bílé",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "tesco",
+            "id": "2001012691635",
+            "name": "Rajská jablka červená kulatá [1 kg] Rajčata 1kg",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "tesco",
+            "id": "2001014829975",
+            "name": "Okurky salátové [1 kg] Okurka hadovka",
+            "unit": "kus",
+            "quantity": 3.33
+        },
+        {
+            "store": "tesco",
+            "id": "2001014849461",
+            "name": "Papriky [1 kg] The Grower&#x27;s Harvest Paprika zeleninová 500g",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "tesco",
+            "id": "2001012693547",
+            "name": "Zelí hlávkové bílé [1 kg] Zelí bílé volné",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "tesco",
+            "id": "2001012693080",
+            "name": "Květák bílý celý [1 kus] Květák",
+            "unit": "kus",
+            "quantity": 1
+        },
+        {
+            "store": "tesco",
+            "id": "2001012691581",
+            "name": "Mrkev [1 kg] Mrkev",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "tesco",
+            "id": "2001012692991",
+            "name": "Celer [1 kg] Celer",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "tesco",
+            "id": "2001012691574",
+            "name": "Cibule suchá [1 kg] Cibule volná",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "tesco",
+            "id": "2001012693462",
+            "name": "Česnek suchý [1 kg] Česnek",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "tesco",
+            "id": "2001012974837",
+            "name": "Brokolice [1 ks] Tesco Brokolice 500g",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "tesco",
+            "id": "2001012693134",
+            "name": "Salát ledový [1 ks] Tesco Salát ledový",
+            "unit": "kus",
+            "quantity": 1
+        },
+        {
+            "store": "tesco",
+            "id": "2001120031731",
+            "name": "Nakládané zelí [1 kg] H+H Kysané zelí 700g",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "tesco",
+            "id": "2001020194676",
+            "name": "Konzumní brambory [1 kg] Tesco Finest Brambory konzumní pozdní prané 1kg",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "tesco",
+            "id": "2001120713881",
+            "name": "Cukr krystalový [1 kg] Tesco Cukr bílý krystal 1kg",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "tesco",
+            "id": "2001015334164",
+            "name": "Cukr moučkový [1 kg] Korunní Cukr Moučka 1000g",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "tesco",
+            "id": "2001018234850",
+            "name": "Pravý včelí med [1 kg] Medokomerc Med květový 900g",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "tesco",
+            "id": "2005100429245",
+            "name": "Čokoláda mléčná tabulková [100 g] Tesco Mléčná čokoláda 100g",
+            "unit": "g",
+            "quantity": 100
+        },
+        {
+            "store": "tesco",
+            "id": "2001020291812",
+            "name": "Dětská výživa [220 g] Hello Ovocná přesnídávka s banány 190g",
+            "unit": "g",
+            "quantity": 220
+        },
+        {
+            "store": "tesco",
+            "id": "2001012226042",
+            "name": "Sušené mléko pro kojeneckou výživu [500 g] ",
+            "unit": "g",
+            "quantity": 500
+        },
+        {
+            "store": "tesco",
+            "id": "2005105010717",
+            "name": "Káva rozpustná [100 g] Jacobs Velvet Crema rozpustná káva 300g",
+            "unit": "g",
+            "quantity": 100
+        },
+        {
+            "store": "tesco",
+            "id": "2005100771848",
+            "name": "Káva zrnková pražená [100 g] Tesco Crema pražená zrnková káva 1kg",
+            "unit": "g",
+            "quantity": 100
+        },
+        {
+            "store": "tesco",
+            "id": "2001019521782",
+            "name": "Čaj černý porcovaný [100 g] Dilmah Earl Grey černý čaj 20 x 1,5g",
+            "unit": "kus",
+            "quantity": 66.667
+        },
+        {
+            "store": "tesco",
+            "id": "2005100241989",
+            "name": "Kakaový prášek [100 g] Tesco Kakaový prášek se sníženým obsahem tuku 200g",
+            "unit": "g",
+            "quantity": 100
+        },
+        {
+            "store": "tesco",
+            "id": "2001020261514",
+            "name": "Přírodní minerální voda uhličitá [1 l] Tesco Ochucená minerální voda s příchutí citrón jemně perlivá 1,5l",
+            "unit": "ml",
+            "quantity": 1000
+        },
+        {
+            "store": "tesco",
+            "id": "2001120872115",
+            "name": "Nealkoholický nápoj s ovocnou příchutí [1 l] The Grower&#x27;s Harvest 100% jablečná šťáva z koncentrátu 1l",
+            "unit": "ml",
+            "quantity": 1000
+        },
+        {
+            "store": "tesco",
+            "id": "2001130393966",
+            "name": "Tuzemský tmavý (Tuzemák) [1 l] Firemark Tuzemský 1l",
+            "unit": "ml",
+            "quantity": 1000
+        },
+        {
+            "store": "tesco",
+            "id": "2001130393972",
+            "name": "Vodka jemná [1 l] Pure Star Original vodka 1l",
+            "unit": "ml",
+            "quantity": 1000
+        },
+        {
+            "store": "tesco",
+            "id": "2005100307483",
+            "name": "Jakostní víno červené - od 2015 [0,75 l] Tesco Červené víno polosladké 750ml",
+            "unit": "ml",
+            "quantity": 750
+        },
+        {
+            "store": "tesco",
+            "id": "2001005107488",
+            "name": "Pivo výčepní, světlé, lahvové [0,5 l] Budvar Výčepní světlé výčepní pivo lahev 0,5l",
+            "unit": "ml",
+            "quantity": 500
+        }
+    ]
+}

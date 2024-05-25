@@ -1,0 +1,607 @@
+{
+    "name": "Spotřební koš - Albert(86)",
+    "items": [
+        {
+            "store": "albert",
+            "id": "27157954",
+            "name": "Rýže loupaná dlouhozrnná [1 kg] Albert Rýže dlouhozrnná loupaná, sypaná",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "albert",
+            "id": "23323995",
+            "name": "Pšeničná mouka hladká [1 kg] Albert Mouka hladká pšeničná",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "albert",
+            "id": "20480882",
+            "name": "Chléb konzumní kmínový [1 kg] Chléb Šumava",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "albert",
+            "id": "20480905",
+            "name": "Pečivo pšeničné bílé [1 kg] Rohlík",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "albert",
+            "id": "27570098",
+            "name": "Máslový koláč z kynutého těsta [1 kg] Vlčnovský vdolek",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "albert",
+            "id": "25351057",
+            "name": "Sušenky slepované nemáčené [1 kg] Oreo Sušenky s vanilkovou náplní",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "albert",
+            "id": "23320659",
+            "name": "Piškoty dětské světlé [100 g] Albert Piškoty",
+            "unit": "g",
+            "quantity": 100
+        },
+        {
+            "store": "albert",
+            "id": "25471519",
+            "name": "Těstoviny vaječné [1 kg] Zátkovy vaječné těstoviny Špagety",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "albert",
+            "id": "22839824",
+            "name": "Hovězí maso zadní bez kosti [1 kg] Hovězí zadní kýta bez kosti",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "albert",
+            "id": "22839862",
+            "name": "Hovězí maso přední bez kosti [1 kg] Hovězí přední kližka bez kosti",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "albert",
+            "id": "23279537",
+            "name": "Hovězí maso přední s kostí [1 kg] Hovězí přední - žebro s kostí",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "albert",
+            "id": "27557204",
+            "name": "Vepřová kýta bez kosti [1 kg] Královská vepřová kýta bez kosti řízky",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "albert",
+            "id": "22840011",
+            "name": "Vepřová krkovice [1 kg] Vepřová krkovice bez kosti v celku",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "albert",
+            "id": "22840363",
+            "name": "Vepřová plec [1 kg] Vepřová plec bez kosti v celku",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "albert",
+            "id": "22840400",
+            "name": "Vepřový bůček [1 kg] Vepřový bok bez kosti plátky",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "albert",
+            "id": "22840226",
+            "name": "Vepřová pečeně [1 kg] Vepřová pečeně bez kosti v celku",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "albert",
+            "id": "24306096",
+            "name": "Kuřata kuchaná celá [1 kg] Kuře bez drobů chlazené",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "albert",
+            "id": "24306126",
+            "name": "Kuřecí prsní řízky [1 kg] Kuřecí prsní řízky chlazené",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "albert",
+            "id": "24252195",
+            "name": "Kuřecí stehna [1 kg] Kuřecí stehna chlazená",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "albert",
+            "id": "25959598",
+            "name": "Kachny kuchané [1 kg] Kachna chlazená",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "albert",
+            "id": "24930239",
+            "name": "Krůtí prsní řízky [1 kg] Krůtí prsní řízek chlazený",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "albert",
+            "id": "25959901",
+            "name": "Králík domácí [1 kg] Králík s hlavou chlazený",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "albert",
+            "id": "25057119",
+            "name": "Párky [1 kg] Vodňanská drůbež Párky pochoutkové",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "albert",
+            "id": "27866429",
+            "name": "Šunkový salám [1 kg] Česká chuť Salám šunkový",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "albert",
+            "id": "27035504",
+            "name": "Papriková klobása [1 kg] Albert Excellent Papriková klobása",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "albert",
+            "id": "27512852",
+            "name": "Poličan [1 kg] Česká chuť Poličan",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "albert",
+            "id": "27808207",
+            "name": "Šunka vepřová [1 kg] Albert Šunka standard Šunka standard",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "albert",
+            "id": "25577730",
+            "name": "Losos filet [1 kg] Losos filet s kůží vakuovaný, mražený",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "albert",
+            "id": "22530509",
+            "name": "Kapr chlazený [1 kg] Rybí trh Kapr půlený",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "albert",
+            "id": "26978345",
+            "name": "Filé mražené [1 kg] Albert Aljašská treska filé",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "albert",
+            "id": "22532749",
+            "name": "Pstruh [1 kg] Rybí trh Pstruh kuchaný, celý",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "albert",
+            "id": "24056779",
+            "name": "Mléko plnotučné trvanlivé [1 l] Albert Mléko plnotučné trvanlivé",
+            "unit": "ml",
+            "quantity": 1000
+        },
+        {
+            "store": "albert",
+            "id": "24872645",
+            "name": "Mléko polotučné pasterované [1 l] Albert Mléko polotučné čerstvé",
+            "unit": "ml",
+            "quantity": 1000
+        },
+        {
+            "store": "albert",
+            "id": "23329652",
+            "name": "Mléko polotučné trvanlivé [1 l] Albert Mléko polotučné trvanlivé 1,5%",
+            "unit": "ml",
+            "quantity": 1000
+        },
+        {
+            "store": "albert",
+            "id": "24885508",
+            "name": "Kondenzované mléko neslazené [500 g] Tatra Classic zahuštěné neslazené mléko",
+            "unit": "g",
+            "quantity": 500
+        },
+        {
+            "store": "albert",
+            "id": "27123409",
+            "name": "Jogurt bílý netučný [150 g] Albert Jogurt bílý",
+            "unit": "g",
+            "quantity": 150
+        },
+        {
+            "store": "albert",
+            "id": "20295622",
+            "name": "Smetanový jogurt ovocný [150 g] Olma Florian smetanový jogurt jahoda",
+            "unit": "g",
+            "quantity": 150
+        },
+        {
+            "store": "albert",
+            "id": "26982755",
+            "name": "Eidamská cihla [1 kg] Madeta Jihočeský Eidam 30% plátky",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "albert",
+            "id": "20295479",
+            "name": "Hermelín [1 kg] Sedlčanský Hermelín originál",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "albert",
+            "id": "27125199",
+            "name": "Tavený sýr neochucený [1 kg] Albert Tavený sýr",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "albert",
+            "id": "20675165",
+            "name": "Lučina [1 kg] Lučina",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "albert",
+            "id": "27803127",
+            "name": "Niva [1 kg] Jihočeská Niva 45%",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "albert",
+            "id": "26890562",
+            "name": "Gouda [1 kg] Albert MAXI Gouda 48% plátky",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "albert",
+            "id": "23841161",
+            "name": "Tvaroh měkký konzumní [1 kg] Milko Tvaroh odtučněný",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "albert",
+            "id": "20976774",
+            "name": "Smetana sladká trvanlivá [1 l] Madeta Trvanlivá smetana ke šlehání 31%",
+            "unit": "ml",
+            "quantity": 1000
+        },
+        {
+            "store": "albert",
+            "id": "27698914",
+            "name": "Tradiční pomazánkové [1 kg] Albert Tradiční pomazánkové Natural",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "albert",
+            "id": "27171592",
+            "name": "Zakysané mléčné výrobky [1 kg] Albert Zakysaná smetana 12%",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "albert",
+            "id": "23617438",
+            "name": "Vejce slepičí čerstvá [10 ks] Albert Čerstvá vejce, vel. M",
+            "unit": "kus",
+            "quantity": 10
+        },
+        {
+            "store": "albert",
+            "id": "20976781",
+            "name": "Máslo [1 kg] Madeta Jihočeské máslo",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "albert",
+            "id": "27787045",
+            "name": "Rostlinný roztíratelný tuk [1 kg] Liga Roztíratelný tuk 20%",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "albert",
+            "id": "24343992",
+            "name": "Olej rostlinný [1 l] Albert Olej slunečnicový",
+            "unit": "ml",
+            "quantity": 1000
+        },
+        {
+            "store": "albert",
+            "id": "26258799",
+            "name": "Vepřové sádlo škvařené [1 kg] Albert Comperio Sádlo",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "albert",
+            "id": "20441944",
+            "name": "Pomeranče [1 kg] Albert Pomeranče síť",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "albert",
+            "id": "20440558",
+            "name": "Citrony [1 kg] Albert Citróny síť",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "albert",
+            "id": "20443412",
+            "name": "Banány žluté [1 kg] Banány premium",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "albert",
+            "id": "20902216",
+            "name": "Jablka konzumní [1 kg] Jablka červená",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "albert",
+            "id": "23717077",
+            "name": "Hrozny stolní [1 kg] Albert Hrozny bílé bezsemenné",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "albert",
+            "id": "24363303",
+            "name": "Rajská jablka červená kulatá [1 kg] Albert Rajčata soudková",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "albert",
+            "id": "20444624",
+            "name": "Okurky salátové [1 kg] Okurka hadovka",
+            "unit": "kus",
+            "quantity": 3.33
+        },
+        {
+            "store": "albert",
+            "id": "20698171",
+            "name": "Papriky [1 kg] Paprika světlá",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "albert",
+            "id": "20450106",
+            "name": "Zelí hlávkové bílé [1 kg] Zelí červené hlávkové",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "albert",
+            "id": "20449513",
+            "name": "Květák bílý celý [1 kus] Květák",
+            "unit": "kus",
+            "quantity": 1
+        },
+        {
+            "store": "albert",
+            "id": "24376846",
+            "name": "Mrkev [1 kg] Albert Mrkev",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "albert",
+            "id": "20443894",
+            "name": "Celer [1 kg] Celer bulvový",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "albert",
+            "id": "20446512",
+            "name": "Cibule suchá [1 kg] Albert Cibule kuchyňská žlutá, síť",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "albert",
+            "id": "20448585",
+            "name": "Česnek suchý [1 kg] Česnek volný",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "albert",
+            "id": "20449148",
+            "name": "Brokolice [1 ks] Albert Brokolice",
+            "unit": "kus",
+            "quantity": 1
+        },
+        {
+            "store": "albert",
+            "id": "20444372",
+            "name": "Salát ledový [1 ks] Albert Salát ledový",
+            "unit": "kus",
+            "quantity": 1
+        },
+        {
+            "store": "albert",
+            "id": "23093829",
+            "name": "Nakládané zelí [1 kg] Albert Zelí kysané bílé",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "albert",
+            "id": "20453770",
+            "name": "Konzumní brambory [1 kg] Brambory konzumní rané",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "albert",
+            "id": "24251020",
+            "name": "Cukr krystalový [1 kg] TTD Cukr krupice bílý",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "albert",
+            "id": "23438231",
+            "name": "Cukr moučkový [1 kg] Vrbátky Cukr moučka",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "albert",
+            "id": "24162401",
+            "name": "Pravý včelí med [1 kg] Medokomerc Med květový",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "albert",
+            "id": "27706589",
+            "name": "Čokoláda mléčná tabulková [100 g] Delicata Mléčná čokoláda",
+            "unit": "g",
+            "quantity": 100
+        },
+        {
+            "store": "albert",
+            "id": "25430868",
+            "name": "Dětská výživa [220 g] Hello Ovocná přesnídávka s banány",
+            "unit": "g",
+            "quantity": 220
+        },
+        {
+            "store": "albert",
+            "id": "22566942",
+            "name": "Sušené mléko pro kojeneckou výživu [500 g] Sunar Complex 1 Počáteč. kojenecké mléko",
+            "unit": "g",
+            "quantity": 500
+        },
+        {
+            "store": "albert",
+            "id": "24345019",
+            "name": "Káva rozpustná [100 g] Jacobs Velvet Crema",
+            "unit": "g",
+            "quantity": 100
+        },
+        {
+            "store": "albert",
+            "id": "27257210",
+            "name": "Káva zrnková pražená [100 g] Perla Bio Aroma zrnková káva",
+            "unit": "g",
+            "quantity": 100
+        },
+        {
+            "store": "albert",
+            "id": "26371078",
+            "name": "Čaj černý porcovaný [100 g] Albert MAXI Černý čaj",
+            "unit": "g",
+            "quantity": 100
+        },
+        {
+            "store": "albert",
+            "id": "26751498",
+            "name": "Kakaový prášek [100 g] Albert Kakao holandské",
+            "unit": "g",
+            "quantity": 100
+        },
+        {
+            "store": "albert",
+            "id": "25273588",
+            "name": "Přírodní minerální voda uhličitá [1 l] Dobrá voda minerální neperlivá",
+            "unit": "ml",
+            "quantity": 1000
+        },
+        {
+            "store": "albert",
+            "id": "24706605",
+            "name": "Nealkoholický nápoj s ovocnou příchutí [1 l] Albert Džus jablko 100%",
+            "unit": "ml",
+            "quantity": 1000
+        },
+        {
+            "store": "albert",
+            "id": "27306581",
+            "name": "Tuzemský tmavý (Tuzemák) [1 l] La Bohéma Tuzemák 37,5%",
+            "unit": "ml",
+            "quantity": 1000
+        },
+        {
+            "store": "albert",
+            "id": "27306611",
+            "name": "Vodka jemná [1 l] La Bohéma Vodka 37,5%",
+            "unit": "ml",
+            "quantity": 1000
+        },
+        {
+            "store": "albert",
+            "id": "25117578",
+            "name": "Jakostní víno červené - od 2015 [0,75 l] Víno Motýl Tramín červený",
+            "unit": "ml",
+            "quantity": 750
+        },
+        {
+            "store": "albert",
+            "id": "23880559",
+            "name": "Pivo výčepní, světlé, lahvové [0,5 l] Budějovický Budvar pivo výčepní světlé",
+            "unit": "ml",
+            "quantity": 500
+        }
+    ]
+}

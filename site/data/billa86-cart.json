@@ -1,0 +1,607 @@
+{
+    "name": "Spotřební koš - Billa(86)",
+    "items": [
+        {
+            "store": "billa",
+            "id": "82-306069",
+            "name": "Rýže loupaná dlouhozrnná [1 kg] BILLA Dlouhozrnná rýže loupaná 1000g",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "billa",
+            "id": "82-270690",
+            "name": "Pšeničná mouka hladká [1 kg] clever Pšeničná mouka hladká 1kg",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "billa",
+            "id": "82-316365",
+            "name": "Chléb konzumní kmínový [1 kg] Chléb konzumní s kmínem",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "billa",
+            "id": "82-316363",
+            "name": "Pečivo pšeničné bílé [1 kg] Rohlík 43g",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "billa",
+            "id": "82-348541",
+            "name": "Máslový koláč z kynutého těsta [1 kg] Koláč tvarohový 85g",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "billa",
+            "id": "82-336731",
+            "name": "Sušenky slepované nemáčené [1 kg] Lotus Biscoff Karamelizované sušenky spojené náplní s vanilkovou příchutí 150g",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "billa",
+            "id": "82-287895",
+            "name": "Piškoty dětské světlé [100 g] clever Piškoty 250g",
+            "unit": "g",
+            "quantity": 100
+        },
+        {
+            "store": "billa",
+            "id": "82-270261",
+            "name": "Těstoviny vaječné [1 kg] Těstoviny vaječné [1 kg] Selské nudle Špecle 500g",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "billa",
+            "id": "82-231602",
+            "name": "Hovězí maso zadní bez kosti [1 kg] VOCÍLKA Hovězí zadní kýta bez kosti",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "billa",
+            "id": "82-231603",
+            "name": "Hovězí maso přední bez kosti [1 kg] VOCÍLKA Hovězí přední bez kosti",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "billa",
+            "id": "82-318342",
+            "name": "Hovězí maso přední s kostí [1 kg] VOCÍLKA Hovězí přední s kostí",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "billa",
+            "id": "82-318322",
+            "name": "Vepřová kýta bez kosti [1 kg] VOCÍLKA Vepřová kýta bez kosti",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "billa",
+            "id": "82-352220",
+            "name": "Vepřová krkovice [1 kg] Vepřová krkovice bez kosti",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "billa",
+            "id": "82-318334",
+            "name": "Vepřová plec [1 kg] VOCÍLKA Vepřová plec bez kosti",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "billa",
+            "id": "82-318337",
+            "name": "Vepřový bůček [1 kg] VOCÍLKA Vepřový bok bez kosti",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "billa",
+            "id": "82-318326",
+            "name": "Vepřová pečeně [1 kg] VOCÍLKA Vepřová pečeně bez kosti",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "billa",
+            "id": "82-318850",
+            "name": "Kuřata kuchaná celá [1 kg] VOCÍLKA Kuře chlazené",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "billa",
+            "id": "82-318015",
+            "name": "Kuřecí prsní řízky [1 kg] VOCÍLKA Kuřecí prsní řízky",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "billa",
+            "id": "82-318012",
+            "name": "Kuřecí stehna [1 kg] VOCÍLKA Kuřecí stehna horní",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "billa",
+            "id": "82-317698",
+            "name": "Kachny kuchané [1 kg] Mladá kachna bez drobů",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "billa",
+            "id": "82-318654",
+            "name": "Krůtí prsní řízky [1 kg] Krůtí prsní řízek",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "billa",
+            "id": "82-318656",
+            "name": "Králík domácí [1 kg] Králík celý s hlavou",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "billa",
+            "id": "82-317971",
+            "name": "Párky [1 kg] clever Jemné kuřecí párky 1kg",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "billa",
+            "id": "82-348126",
+            "name": "Šunkový salám [1 kg] clever Šunkový salám 100g",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "billa",
+            "id": "82-233103",
+            "name": "Papriková klobása [1 kg] Papriková klobása",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "billa",
+            "id": "82-317231",
+            "name": "Poličan [1 kg] Poličan krájený",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "billa",
+            "id": "82-228654",
+            "name": "Šunka vepřová [1 kg] Vepřová šunka dušená krájená",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "billa",
+            "id": "82-277364",
+            "name": "Losos filet [1 kg] Mylord Losos filety 500g",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "billa",
+            "id": "82-318616",
+            "name": "Kapr chlazený [1 kg] Kapr půlený chlazený",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "billa",
+            "id": "82-299772",
+            "name": "Filé mražené [1 kg] Mylord Premium Porce filé bez kostí 300g",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "billa",
+            "id": "82-317870",
+            "name": "Pstruh [1 kg] SKIN Pstruh lososovitý, filet",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "billa",
+            "id": "82-332715",
+            "name": "Mléko plnotučné trvanlivé [1 l] clever Mléko plnotučné trvanlivé 3,5 % tuku 1l",
+            "unit": "ml",
+            "quantity": 1000
+        },
+        {
+            "store": "billa",
+            "id": "82-321772",
+            "name": "Mléko polotučné pasterované [1 l] clever Čerstvé mléko polotučné 1,5% 1l",
+            "unit": "ml",
+            "quantity": 1000
+        },
+        {
+            "store": "billa",
+            "id": "82-314894",
+            "name": "Mléko polotučné trvanlivé [1 l] clever Mléko polotučné trvanlivé 1,5 % tuku 1l",
+            "unit": "ml",
+            "quantity": 1000
+        },
+        {
+            "store": "billa",
+            "id": "82-166140",
+            "name": "Kondenzované mléko neslazené [500 g] Tatra Grand zahuštěné neslazené mléko 310g",
+            "unit": "g",
+            "quantity": 500
+        },
+        {
+            "store": "billa",
+            "id": "82-297798",
+            "name": "Jogurt bílý netučný [150 g] clever Jogurt bílý s bifidokulturou 150g",
+            "unit": "g",
+            "quantity": 150
+        },
+        {
+            "store": "billa",
+            "id": "82-204774",
+            "name": "Smetanový jogurt ovocný [150 g] Olma Florian Smetanový jogurt jahoda 150g",
+            "unit": "g",
+            "quantity": 150
+        },
+        {
+            "store": "billa",
+            "id": "82-317209",
+            "name": "Eidamská cihla [1 kg] MILK EIDAM 30% CIHLA 12KG DE/243 (4X3KG)",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "billa",
+            "id": "82-342548",
+            "name": "Hermelín [1 kg] Král Sýrů Hermelín originál maxi 170g",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "billa",
+            "id": "82-305441",
+            "name": "Tavený sýr neochucený [1 kg] clever Jemný tavený sýr 3 x 50g (150g)",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "billa",
+            "id": "82-242802",
+            "name": "Lučina [1 kg] Lučina Originál 100g",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "billa",
+            "id": "82-351105",
+            "name": "Niva [1 kg] Jihočeská niva 45%",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "billa",
+            "id": "82-317173",
+            "name": "Gouda [1 kg] Gouda 48% krájená, plátky",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "billa",
+            "id": "82-312251",
+            "name": "Tvaroh měkký konzumní [1 kg] clever Tvaroh měkký 250g",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "billa",
+            "id": "82-295020",
+            "name": "Smetana sladká trvanlivá [1 l] Milkin Smetana do kávy 12% 196ml",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "billa",
+            "id": "82-347091",
+            "name": "Tradiční pomazánkové [1 kg] clever Tradiční pomazánkové neochucené 150g",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "billa",
+            "id": "82-310474",
+            "name": "Zakysané mléčné výrobky [1 kg] clever Zakysaná smetana 14% 200g",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "billa",
+            "id": "82-315500",
+            "name": "Vejce slepičí čerstvá [10 ks] BILLA Čerstvá vejce M 10 ks",
+            "unit": "kus",
+            "quantity": 10
+        },
+        {
+            "store": "billa",
+            "id": "82-260518",
+            "name": "Máslo [1 kg] Milkpol Máslo 82% 250 g",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "billa",
+            "id": "82-344310",
+            "name": "Rostlinný roztíratelný tuk [1 kg] Perla Máslová příchuť 450g",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "billa",
+            "id": "82-346238",
+            "name": "Olej rostlinný [1 l] Solmio Slunečnicový olej 1l",
+            "unit": "ml",
+            "quantity": 1000
+        },
+        {
+            "store": "billa",
+            "id": "82-226544",
+            "name": "Vepřové sádlo škvařené [1 kg] Brick Vepřové sádlo 500g",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "billa",
+            "id": "82-324245",
+            "name": "Pomeranče [1 kg] Bon Via Pomeranč 1kg síťka",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "billa",
+            "id": "82-250693",
+            "name": "Citrony [1 kg] clever Citron 500g, síťka",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "billa",
+            "id": "82-243971",
+            "name": "Banány žluté [1 kg] Banán",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "billa",
+            "id": "82-306203",
+            "name": "Jablka konzumní [1 kg] Česká Farma Jablko Gala",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "billa",
+            "id": "82-243987",
+            "name": "Hrozny stolní [1 kg] Hrozny bílé",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "billa",
+            "id": "82-245349",
+            "name": "Rajská jablka červená kulatá [1 kg] Rajčata masitá",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "billa",
+            "id": "82-284490",
+            "name": "Okurky salátové [1 kg] Okurka salátová",
+            "unit": "kus",
+            "quantity": 3.33
+        },
+        {
+            "store": "billa",
+            "id": "82-244027",
+            "name": "Papriky [1 kg] Paprika bílá",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "billa",
+            "id": "82-304917",
+            "name": "Zelí hlávkové bílé [1 kg] Česká Farma Zelí bílé",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "billa",
+            "id": "82-330561",
+            "name": "Květák bílý celý [1 kus] Bon Via Květák",
+            "unit": "kus",
+            "quantity": 1
+        },
+        {
+            "store": "billa",
+            "id": "82-341788",
+            "name": "Mrkev [1 kg] Bon Via Mrkev raná, vanička 1kg",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "billa",
+            "id": "82-305688",
+            "name": "Celer [1 kg] Česká Farma Celer bulva",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "billa",
+            "id": "82-305243",
+            "name": "Cibule suchá [1 kg] Česká Farma Cibule",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "billa",
+            "id": "82-334022",
+            "name": "Česnek suchý [1 kg] Česka Farma Česnek",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "billa",
+            "id": "82-324249",
+            "name": "Brokolice [1 ks] Bon Via Brokolice 500 g",
+            "unit": "kus",
+            "quantity": 1
+        },
+        {
+            "store": "billa",
+            "id": "82-304758",
+            "name": "Salát ledový [1 ks] Česká Farma Salát ledový",
+            "unit": "kus",
+            "quantity": 1
+        },
+        {
+            "store": "billa",
+            "id": "82-308412",
+            "name": "Nakládané zelí [1 kg] Zelí kysané",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "billa",
+            "id": "82-304444",
+            "name": "Konzumní brambory [1 kg] Brambory konzumní rané",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "billa",
+            "id": "82-284151",
+            "name": "Cukr krystalový [1 kg] Cukr krystal 1 kg",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "billa",
+            "id": "82-233618",
+            "name": "Cukr moučkový [1 kg] Cukr moučka 1 kg",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "billa",
+            "id": "82-204678",
+            "name": "Pravý včelí med [1 kg] Medokomerc Med květový 900g",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "billa",
+            "id": "82-202942",
+            "name": "Čokoláda mléčná tabulková [100 g] Milka čokoláda Mléčná z alpského mléka 100g",
+            "unit": "g",
+            "quantity": 100
+        },
+        {
+            "store": "billa",
+            "id": "82-312312",
+            "name": "Dětská výživa [220 g] Hello Ovocná přesnídávka s banány 100g",
+            "unit": "g",
+            "quantity": 220
+        },
+        {
+            "store": "billa",
+            "id": "82-275945",
+            "name": "Sušené mléko pro kojeneckou výživu [500 g] Sunar Complex 1 počáteční kojenecké mléko 600g",
+            "unit": "g",
+            "quantity": 500
+        },
+        {
+            "store": "billa",
+            "id": "82-353353",
+            "name": "Káva rozpustná [100 g] Jacobs Velvet Crema rozpustná káva 300g",
+            "unit": "g",
+            "quantity": 100
+        },
+        {
+            "store": "billa",
+            "id": "82-355190",
+            "name": "Káva zrnková pražená [100 g] Segafredo Intermezzo zrnková káva 1 kg",
+            "unit": "g",
+            "quantity": 100
+        },
+        {
+            "store": "billa",
+            "id": "82-295857",
+            "name": "Čaj černý porcovaný [100 g] clever Earl grey černý čaj aromatizovaný 25 x 1,75g (43,75g)",
+            "unit": "g",
+            "quantity": 100
+        },
+        {
+            "store": "billa",
+            "id": "82-301571",
+            "name": "Kakaový prášek [100 g] Marila Kakao holandského typu 100g",
+            "unit": "g",
+            "quantity": 100
+        },
+        {
+            "store": "billa",
+            "id": "82-322452",
+            "name": "Přírodní minerální voda uhličitá [1 l] BILLA Ľubovnianka přírodní minerální voda přirozeně sycená jemně perlivá 1,5l",
+            "unit": "ml",
+            "quantity": 1000
+        },
+        {
+            "store": "billa",
+            "id": "82-213423",
+            "name": "Nealkoholický nápoj s ovocnou příchutí [1 l] Rauch Happy Day jablko 100% 2l",
+            "unit": "ml",
+            "quantity": 1000
+        },
+        {
+            "store": "billa",
+            "id": "82-219425",
+            "name": "Tuzemský tmavý (Tuzemák) [1 l] Božkov Originál Tuzemský 0,5l",
+            "unit": "ml",
+            "quantity": 1000
+        },
+        {
+            "store": "billa",
+            "id": "82-219426",
+            "name": "Vodka jemná [1 l] Božkov Vodka 0,5l",
+            "unit": "ml",
+            "quantity": 1000
+        },
+        {
+            "store": "billa",
+            "id": "82-348175",
+            "name": "Jakostní víno červené - od 2015 [0,75 l] Víno Mikulov Modrý Portugal jakostní víno odrůdové suché červené 0,75l",
+            "unit": "ml",
+            "quantity": 750
+        },
+        {
+            "store": "billa",
+            "id": "82-169664",
+            "name": "Pivo výčepní, světlé, lahvové [0,5 l] Budvar Výčepní světlé výčepní pivo lahev 0,5l",
+            "unit": "ml",
+            "quantity": 500
+        }
+    ]
+}

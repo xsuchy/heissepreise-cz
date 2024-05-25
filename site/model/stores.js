@@ -65,7 +65,7 @@ exports.stores = {
         name: "Tesco",
         budgetBrands: [],
         color: "emerald",
-        defaultChecked: false,
+        defaultChecked: true,
         getUrl: (item) => `https://nakup.itesco.cz/groceries/cs-CZ/products/${item.id}`,
     },
     makro: {

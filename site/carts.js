@@ -28,6 +28,7 @@ function importCart(importedCart) {
     for (const cartItem of importedCart.items) {
         const item = model.items.lookup[cartItem.store + cartItem.id];
         if (!item) continue;
+        if (cartItem.name.length > item.name.length && cartItem.name.indexOf(item.name) > -1) item.name = cartItem.name;
         items.push(item);
     }
     importedCart.items = items;

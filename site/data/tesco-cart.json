@@ -74,7 +74,7 @@
             "price": 42.5,
             "isWeighted": false,
             "unit": "g",
-            "quantity": 250,
+            "quantity": 1000,
             "bio": false,
             "available": true,
             "url": "https://nakup.itesco.cz/groceries/cs-CZ/products/2001015351291"

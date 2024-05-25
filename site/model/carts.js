@@ -37,24 +37,30 @@ class Carts extends Model {
             carts = this._carts = carts.filter((cart) => cart.name != "Spotřební koš - Tesco");
         }
 
-        if (!carts.some((cart) => cart.name == "Spotřební koš - Albert")) {
-            const billaSparCart = await misc.fetchJSON("data/albert-cart.json");
-            carts.unshift(billaSparCart);
-        }
-
-        if (!carts.some((cart) => cart.name == "Spotřební koš - Billa")) {
-            const budgetCart = await misc.fetchJSON("data/billa-cart.json");
-            carts.unshift(budgetCart);
-        }
-
-        if (!carts.some((cart) => cart.name == "Spotřební koš - Globus")) {
-            const budgetCart = await misc.fetchJSON("data/globus-cart.json");
-            carts.unshift(budgetCart);
-        }
-
-        if (!carts.some((cart) => cart.name == "Spotřební koš - Tesco")) {
-            const budgetCart = await misc.fetchJSON("data/tesco-cart.json");
-            carts.unshift(budgetCart);
+        const predefinedCarts = [
+            "Spotřební koš - Tesco",
+            "Spotřební koš - Globus",
+            "Spotřební koš - Billa",
+            "Spotřební koš - Albert",
+            "Spotřební koš - Tesco(86)",
+            "Spotřební koš - Globus(86)",
+            "Spotřební koš - Billa(86)",
+            "Spotřební koš - Albert(86)",
+        ];
+        for (let n of predefinedCarts) {
+            let fileName = `data/${n
+                .match(/[\S]+$/)[0]
+                .toLowerCase()
+                .replace(/[\(\)]/g, "")}-cart.json`;
+            let cartItem = carts.find((cart) => cart.name == n);
+            const cart = await misc.fetchJSON(fileName);
+            if (cartItem == undefined) {
+                carts.unshift(cart);
+            } else {
+                for (let i of cartItem.items) {
+                    i.quantity = cart.items.find((j) => j.id == i.id).quantity;
+                }
+            }
         }
 
         // Update items in cart to their latest version.
@@ -66,7 +72,7 @@ class Carts extends Model {
                     if (cartItem.quantity != item.quantity && cartItem.unit == item.unit) {
                         const coef = cartItem.quantity / item.quantity;
                         item.price *= coef;
-                        item.quantity *= coef;
+                        item.quantity = Math.round(item.quantity * coef);
                         for (let h of item.priceHistory) {
                             h.price *= coef;
                         }

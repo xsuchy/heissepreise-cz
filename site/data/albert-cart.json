@@ -3,159 +3,107 @@
     "items": [
         {
             "store": "albert",
-            "id": "22840226",
-            "name": "Vepřová pečeně bez kosti v celku",
-            "category": "zeH001",
-            "isWeighted": false,
-            "unit": "g",
-            "quantity": 1000,
-            "bio": false,
-            "available": true,
-            "url": "https://www.albert.cz/shop/Maso-a-ryby/Veprove/Kotlety-zebra-bok/Veprova-pecene-bez-kosti-v-celku/p/22840226"
-        },
-        {
-            "store": "albert",
-            "id": "23329652",
-            "name": "Albert Mléko polotučné trvanlivé 1,5%",
-            "category": "zeJ001",
-            "isWeighted": false,
-            "unit": "ml",
-            "quantity": 1000,
-            "bio": false,
-            "available": true,
-            "url": "https://www.albert.cz/shop/Mlecne-a-chlazene/Mleko-a-mlecne-napoje/Trvanlive-mleko/Albert-Mleko-polotucne-trvanlive-1-5-/p/23329652"
-        },
-        {
-            "store": "albert",
-            "id": "26982755",
-            "name": "Madeta Jihočeský Eidam 30% plátky",
-            "category": "zeJ001",
-            "isWeighted": false,
-            "unit": "g",
-            "quantity": 1000,
-            "bio": false,
-            "available": true,
-            "url": "https://www.albert.cz/shop/Mlecne-a-chlazene/Syry/Platkove/Eidam/Madeta-Jihocesky-Eidam-30-platky/p/26982755"
-        },
-        {
-            "store": "albert",
-            "id": "20295592",
-            "name": "Olma Klasik jogurt bílý",
-            "category": "zeJ001",
-            "isWeighted": false,
-            "unit": "g",
-            "quantity": 150,
-            "bio": false,
-            "available": true,
-            "url": "https://www.albert.cz/shop/Mlecne-a-chlazene/Jogurty-a-mlecne-dezerty/Bile/Olma-Klasik-jogurt-bily/p/20295592"
-        },
-        {
-            "store": "albert",
-            "id": "23617438",
-            "name": "Albert Čerstvá vejce, vel. M",
-            "category": "zeJ001",
-            "isWeighted": false,
-            "unit": "kus",
-            "quantity": 10,
-            "bio": false,
-            "available": true,
-            "url": "https://www.albert.cz/shop/Mlecne-a-chlazene/Vejce-a-drozdi/Albert-Cerstva-vejce-vel-M/p/23617438"
-        },
-        {
-            "store": "albert",
-            "id": "20976781",
-            "name": "Madeta Jihočeské máslo",
-            "category": "zeJ001",
-            "isWeighted": false,
-            "unit": "g",
-            "quantity": 250,
-            "bio": false,
-            "available": true,
-            "url": "https://www.albert.cz/shop/Mlecne-a-chlazene/Maslo-tuky-margariny/Maslo/Madeta-Jihoceske-maslo/p/20976781"
-        },
-        {
-            "store": "albert",
             "id": "23323995",
             "name": "Albert Mouka hladká pšeničná",
             "category": "zeL001",
-            "isWeighted": false,
             "unit": "g",
-            "quantity": 1000,
-            "bio": false,
-            "available": true,
-            "url": "https://www.albert.cz/shop/Trvanlive/Peceni-a-prisady-na-vareni/Mouky-a-krupice/Hladke/Albert-Mouka-hladka-psenicna/p/23323995"
+            "quantity": 1000
         },
         {
             "store": "albert",
             "id": "20480882",
             "name": "Chléb Šumava",
             "category": "zeF001",
-            "isWeighted": false,
             "unit": "g",
-            "quantity": 1000,
-            "bio": false,
-            "available": true,
-            "url": "https://www.albert.cz/shop/Pekarna-a-cukrarna/Chleb-volny/Svetly/Chleb-Sumava/p/20480882"
+            "quantity": 1000
         },
         {
             "store": "albert",
             "id": "20480905",
             "name": "Rohlík",
             "category": "zeF001",
-            "isWeighted": false,
             "unit": "g",
-            "quantity": 1000,
-            "bio": false,
-            "available": true,
-            "url": "https://www.albert.cz/shop/Pekarna-a-cukrarna/Slane-pecivo-volne/Rohliky/Rohlik/p/20480905"
+            "quantity": 1000
+        },
+        {
+            "store": "albert",
+            "id": "22840226",
+            "name": "Vepřová pečeně bez kosti v celku",
+            "category": "zeH001",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "albert",
+            "id": "23329652",
+            "name": "Albert Mléko polotučné trvanlivé 1,5%",
+            "category": "zeJ001",
+            "unit": "ml",
+            "quantity": 1000
+        },
+        {
+            "store": "albert",
+            "id": "20295592",
+            "name": "Olma Klasik jogurt bílý",
+            "category": "zeJ001",
+            "unit": "g",
+            "quantity": 150
+        },
+        {
+            "store": "albert",
+            "id": "26982755",
+            "name": "Madeta Jihočeský Eidam 30% plátky",
+            "category": "zeJ001",
+            "unit": "g",
+            "quantity": 1000
+        },
+        {
+            "store": "albert",
+            "id": "23617438",
+            "name": "Albert Čerstvá vejce, vel. M",
+            "category": "zeJ001",
+            "unit": "kus",
+            "quantity": 10
+        },
+        {
+            "store": "albert",
+            "id": "20976781",
+            "name": "Madeta Jihočeské máslo",
+            "category": "zeJ001",
+            "unit": "g",
+            "quantity": 1000
         },
         {
             "store": "albert",
             "id": "24251020",
             "name": "TTD Cukr krupice bílý",
             "category": "zeL001",
-            "isWeighted": false,
             "unit": "g",
-            "quantity": 1000,
-            "bio": false,
-            "available": true,
-            "url": "https://www.albert.cz/shop/Trvanlive/Peceni-a-prisady-na-vareni/Cukry-sladidla-sirupy/Bily-cukr/TTD-Cukr-krupice-bily/p/24251020"
-        },
-        {
-            "store": "albert",
-            "id": "23880559",
-            "name": "Budějovický Budvar pivo výčepní světlé",
-            "category": "zeE001",
-            "isWeighted": false,
-            "unit": "ml",
-            "quantity": 500,
-            "bio": false,
-            "available": true,
-            "url": "https://www.albert.cz/shop/Napoje/Piva/Vycepni/Plechovky/Budejovicky-Budvar-pivo-vycepni-svetle/p/23880559"
+            "quantity": 1000
         },
         {
             "store": "albert",
             "id": "20453770",
             "name": "Brambory konzumní rané",
             "category": "zeG001",
-            "isWeighted": false,
             "unit": "g",
-            "quantity": 1000,
-            "bio": false,
-            "available": true,
-            "url": "https://www.albert.cz/shop/Ovoce-a-zelenina/Zelenina/Brambory-a-cibuloviny/Brambory-konzumni-rane/p/20453770"
+            "quantity": 1000
         },
         {
             "store": "albert",
             "id": "20902216",
             "name": "Jablka červená",
             "category": "zeG001",
-            "isWeighted": false,
             "unit": "g",
-            "quantity": 1000,
-            "bio": false,
-            "available": true,
-            "url": "https://www.albert.cz/shop/Ovoce-a-zelenina/Ovoce/Jablka-a-hrusky/Jablka-cervena/p/20902216"
+            "quantity": 1000
+        },
+        {
+            "store": "albert",
+            "id": "23880559",
+            "name": "Budějovický Budvar pivo výčepní světlé",
+            "category": "zeE001",
+            "unit": "ml",
+            "quantity": 500
         }
     ]
 }
