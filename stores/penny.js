@@ -18,8 +18,8 @@ exports.getCanonical = function (item, today) {
     let unit = item.volumeLabelKey;
     if (!item.price) return null;
     let price = (item.price.loyalty?.value ?? item.price.regular.value) / 100
-    if ((item.price?.validityStart > today) ||
-    (item.price?.validityEnd < today))
+    if (((item.price?.validityStart > today) ||
+    (item.price?.validityEnd < today)) && item.price?.crossed) 
         price = Math.max(price, item.price?.crossed / 100);
     return utils.convertUnit(
         {
