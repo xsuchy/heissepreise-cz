@@ -17,7 +17,17 @@ const units = {
 };
 
 exports.getCanonical = function (item, today) {
-    if (item.stockAvailability.availabilityIndicator != 0 && item.stockAvailability.availabilityIndicator != 3) return null;
+    if (
+        // 0 IN_STORE
+        item.stockAvailability.availabilityIndicator == 1 || // SOLDOUT_ONLINE
+        item.stockAvailability.availabilityIndicator == 2 // SOON_ONLINE
+    )
+        // 3 AVAILABLE_ONLINE
+        return null;
+    let from = item.stockAvailability.badgeInfo?.badges?.filter((b) => b.type.endsWith("_IN_STORE_AS_OF"));
+    let monthDay = today.slice(-5);
+    let translatedDate = from?.pop()?.text.replace(/Od (\d{2})\.(\d{2})\. .+/, "$2-$1");
+    if (translatedDate > monthDay) return null; // { text: "Od 21.09. pouze v prodejnách", type: "ONLY_IN_STORE_AS_OF" }
     let quantity = 1;
     let unit = item.price?.packaging?.unit ?? "";
     let text = (item.price.basePrice?.text ?? "").trim().split("(")[0].replaceAll(",", ".").toLowerCase();
