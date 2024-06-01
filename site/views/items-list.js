@@ -259,9 +259,8 @@ class ItemsList extends View {
             );
         }
 
-        /*const tdy = (new Date()).toISOString().substr(0,10);
-        let price = item.priceHistory.filter((i) => i.date <= tdy)[0].price;*/
-        let price = item.price;
+        const tdy = new Date().toISOString().substr(0, 10);
+        let price = item.priceHistory.filter((i) => i.date <= tdy)[0].price;
         let unitPrice = item.priceHistory[0].unitPrice;
         let prevPrice = item.priceHistory[1] ? item.priceHistory[1].price : -1;
         if (this.model.priceChangesToday) {
