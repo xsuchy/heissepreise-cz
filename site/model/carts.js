@@ -58,7 +58,7 @@ class Carts extends Model {
                 carts.unshift(cart);
             } else {
                 for (let i of cartItem.items) {
-                    i.quantity = cart.items.find((j) => j.id == i.id).quantity;
+                    i.quantity = cart.items.find((j) => j.id == i.id)?.quantity;
                 }
             }
         }
