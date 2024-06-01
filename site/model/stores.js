@@ -38,7 +38,7 @@ exports.stores = {
         color: "purple",
         defaultChecked: true,
         getUrl: (item) => `https://www.penny.cz/products/${item.url}`,
-        removeOld: true,
+        removeOld: false,
     },
     dm: {
         name: "DM",

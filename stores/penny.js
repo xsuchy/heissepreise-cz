@@ -17,17 +17,21 @@ exports.getCanonical = function (item, today) {
     let quantity = item.amount;
     let unit = item.volumeLabelKey;
     if (!item.price) return null;
-    let price = (item.price.loyalty?.value ?? item.price.regular.value) / 100
+    let price = (item.price.loyalty?.value ?? item.price.regular.value) / 100;
+    let priceHistory = [];
     if (((item.price?.validityStart > today) ||
-    (item.price?.validityEnd < today)) && item.price?.crossed) 
+    (item.price?.validityEnd < today)) && item.price?.crossed) {
+        if (item.price?.validityStart)
+            priceHistory = [{ date: item.price?.validityStart, price: price }];
         price = Math.max(price, item.price?.crossed / 100);
+    }
     return utils.convertUnit(
         {
             id: item.productId,
             name: item.name,
             // description: "", not available
             price: price,
-            priceHistory: [{ date: today, price: price }],
+            priceHistory: priceHistory.concat({ date: today, price: price }),
             isWeighted: item.isWeightArticle,
             unit,
             quantity,

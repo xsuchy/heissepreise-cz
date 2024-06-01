@@ -40,6 +40,16 @@
     "code": ""
   },
   {
+    "id": "DROGERIE",
+    "url": "https://www.penny.cz/category/drogerie-30",
+    "code": ""
+  },
+  {
+    "id": "OSTATNÍ",
+    "url": "https://www.penny.cz/category/ostatni-31",
+    "code": null
+  },
+  {
     "id": "KÁVA, ČAJ, KAKAO",
     "url": "https://www.penny.cz/category/kava-caj-kakao-26",
     "code": ""
@@ -52,11 +62,6 @@
   {
     "id": "PRO ZVÍŘATA",
     "url": "https://www.penny.cz/category/pro-zvirata-29",
-    "code": ""
-  },
-  {
-    "id": "DROGERIE",
-    "url": "https://www.penny.cz/category/drogerie-30",
     "code": ""
   }
 ]

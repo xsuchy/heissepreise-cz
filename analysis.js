@@ -100,6 +100,19 @@ function mergePriceHistory(oldItems, items) {
         delete lookup[item.store + item.id];
         let currPrice = item.priceHistory[0];
         if (oldItem) {
+            if (item.store == "penny")
+            {
+                for (oldPrice of oldItem.priceHistory) {
+                    if (item.priceHistory.filter((i) => i.date == oldPrice.date).length)
+                        continue;
+                    let last = item.priceHistory.slice(-1)[0];
+                    if (last.price == oldPrice.price)
+                        last.date = oldPrice.date;
+                    else
+                        item.priceHistory.push(oldPrice);
+                }
+                continue;
+            }
             if (oldItem.priceHistory[0].price == (currPrice?.price ?? item.price)) {
                 item.priceHistory = oldItem.priceHistory;
                 continue;
