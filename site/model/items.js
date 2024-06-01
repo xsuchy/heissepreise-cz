@@ -181,6 +181,7 @@ exports.decompress = (compressedItems) => {
     const numItems = compressedItems.n;
     const items = new Array(numItems);
     let i = 0;
+    const tdy = new Date().toISOString().substr(0, 10).replace(/-/g, "");
     for (let l = 0; l < numItems; l++) {
         const store = storeLookup[data[i++]];
         const id = data[i++];
@@ -189,6 +190,7 @@ exports.decompress = (compressedItems) => {
         const unavailable = data[i++] == 1;
         const numPrices = data[i++];
         const prices = new Array(numPrices);
+        let todayPrice = null;
         for (let j = 0; j < numPrices; j++) {
             const date = dates[data[i++]];
             const price = data[i++];
@@ -196,6 +198,7 @@ exports.decompress = (compressedItems) => {
                 date: date.substring(0, 4) + "-" + date.substring(4, 6) + "-" + date.substring(6, 8),
                 price,
             };
+            if (tdy >= date && todayPrice === null) todayPrice = price;
         }
         const unit = data[i++];
         const quantity = data[i++];
@@ -209,7 +212,7 @@ exports.decompress = (compressedItems) => {
             name,
             category,
             unavailable,
-            price: prices[0].price,
+            price: todayPrice,
             priceHistory: prices,
             isWeighted,
             unit,
