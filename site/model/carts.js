@@ -67,9 +67,10 @@ class Carts extends Model {
         for (const cart of carts) {
             const items = [];
             for (const cartItem of cart.items) {
-                const item = itemsLookup[cartItem.store + cartItem.id];
+                let item = itemsLookup[cartItem.store + cartItem.id];
                 if (item) {
                     if (cartItem.quantity != item.quantity && cartItem.unit == item.unit) {
+                        item = JSON.parse(JSON.stringify(item));
                         const coef = cartItem.quantity / item.quantity;
                         item.price *= coef;
                         item.quantity = Math.round(item.quantity * coef);
