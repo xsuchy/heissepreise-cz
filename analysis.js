@@ -89,8 +89,11 @@ function mergePriceHistory(oldItems, items) {
     if (oldItems == null) return items;
 
     const lookup = {};
+    const storeNo = {};
     for (oldItem of oldItems) {
         if (!oldItem.name) continue;
+        if (storeNo[oldItem.store]) storeNo[oldItem.store]++;
+        else storeNo[oldItem.store] = 1;
         delete oldItem.unavailable;
         lookup[oldItem.store + oldItem.id] = oldItem;
     }
@@ -131,7 +134,8 @@ function mergePriceHistory(oldItems, items) {
         if (model.stores[item.store]?.removeOld) {
             removed[item.store] = removed[item.store] ? removed[item.store] + 1 : 1;
         } else {
-            item.unavailable = true;
+            if (storeNo[item.store])
+                item.unavailable = true;
             items.push(item);
         }
     }
