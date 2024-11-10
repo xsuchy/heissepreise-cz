@@ -82,7 +82,9 @@ exports.fetchData = async function () {
                     units = units.match(/([\d,]+)\s{0,1}([^\sx\d)]+)/i)?.slice(-2) 
                         || name.match(/([\d,]+)\s{0,1}([^\sx\d)]+)/i)?.slice(-2)
                         || name.replace(/\s/g,"").match(/([\d,]+)\s{0,1}([^\sx\d)]+)/i)?.slice(-2);
-                }
+                    if (units === undefined || units === null) {
+                        units = ["1","ks"];
+                    }
                 let price = prices[i];
                 if (price === null) continue;
                 price = price.text.replace(/\s+([\d,]+)[\S\s]+/, "$1");
@@ -116,7 +118,7 @@ exports.mapCategory = () => {
 
 async function runLocal()
 {
-    await exports.fetchData();
+    let macroItems = await exports.fetchData();
     debugger;
 }
 if (require.main === module) {
